@@ -16,6 +16,7 @@ module.exports = {
       },
     },
     colors: {
+      default: "#fafafa",
       // Primary Colors
       primary: 'rgba(var(--color-primary), <alpha-value>)',
       'primary-contrast': 'rgba(var(--color-primary-contrast), 1)',
