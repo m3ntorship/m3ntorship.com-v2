@@ -1,6 +1,16 @@
-import { Typography } from 'm3ntorship-ui';
+import { Button, Typography } from 'm3ntorship-ui';
 import type { ReactElement } from 'react';
 
+import { Navbar } from './Navbar';
+
 export default function HeroSection(): ReactElement {
-  return <Typography variant='h6'>Hero Section</Typography>;
+  return (
+    <div className='hero'>
+      <Navbar />
+      <Typography variant='h1'>
+        Test All M3ntorship ui library components
+      </Typography>
+      <Button />
+    </div>
+  );
 }
