@@ -1,6 +1,8 @@
 import { Typography } from 'm3ntorship-ui';
 import type { ReactElement } from 'react';
 
+import styles from './ValueSection.module.css';
+
 const values = [
   {
     id: '1',
@@ -24,13 +26,13 @@ const values = [
 
 export default function ValueSection(): ReactElement {
   return (
-    <section className='relative flex justify-end pb-xxxxl'>
-      <div className='absolute left-0 translate-y-1/2 overflow-hidden rounded-lrg bg-white-800 px-xl py-7 backdrop-blur-3xl'>
+    <section className={styles['value-section-wrapper']}>
+      <div className={styles['left-box']}>
         <Typography variant='h4' className='text-dark w-106'>
           Semper feugiat nibh sed pulvinar
         </Typography>
       </div>
-      <div className='rounded-lrg bg-secondary py-22 pr-12 pl-56'>
+      <div className={styles['right-box']}>
         <ul className='flex space-x-med'>
           {values.map((value) => (
             <Value key={value.id} value={value} />
@@ -51,7 +53,7 @@ interface ValueProps {
 
 function Value({ value }: ValueProps): ReactElement {
   return (
-    <li className='flex flex-col items-start'>
+    <li className={styles['value-item']}>
       <Typography variant='h6' color='white' className='mb-xs text-white'>
         {value.title}
       </Typography>

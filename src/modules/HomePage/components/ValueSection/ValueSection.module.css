@@ -1,0 +1,15 @@
+.value-section-wrapper {
+  @apply relative flex justify-end pb-xxxxl;
+}
+
+.left-box {
+  @apply absolute left-0 translate-y-1/2 overflow-hidden rounded-lrg bg-white-800 px-xl py-7 backdrop-blur-3xl;
+}
+
+.right-box {
+  @apply rounded-lrg bg-secondary py-22 pr-12 pl-56;
+}
+
+.value-item {
+  @apply flex flex-col items-start;
+}
