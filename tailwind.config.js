@@ -13,7 +13,9 @@ module.exports = {
     extend: {
       width: {
         "198": "198px",
+        "696": "696px",
       },
+      spacing: oneLayerWithPixelAdding('spacing'),
     },
     colors: {
       default: "#fafafa",
@@ -93,7 +95,6 @@ module.exports = {
     lineHeight: oneLayerWithPixelAdding('lineHeight'),
     fontFamily: themeFontFamily(),
     fontWeight: oneLayerWithNoPixel('fontWeight'),
-    spacing: oneLayerWithPixelAdding('spacing'),
     borderRadius: oneLayerWithPixelAdding('brd-radius'),
     opacity: oneLayerWithNoPixel('opacity'),
     borderWidth: oneLayerWithPixelAdding('brd-width'),
