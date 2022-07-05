@@ -10,6 +10,11 @@ const {
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
+    extend: {
+      width: {
+        "198": "198px",
+      },
+    },
     colors: {
       // Primary Colors
       primary: 'rgba(var(--color-primary), <alpha-value>)',
