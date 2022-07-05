@@ -1,32 +1,33 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const tailwindThemeTokens = require('./figmaTokens.json');
 
-const oneLayerWithPixelAdding = itemName => {
-  const fontSizes = {...tailwindThemeTokens[itemName]};
-  Object.keys(fontSizes).map(property => {
-    if(fontSizes[property]?.value)fontSizes[property] = `${fontSizes[property]?.value}px`;
+const oneLayerWithPixelAdding = (itemName) => {
+  const fontSizes = { ...tailwindThemeTokens[itemName] };
+  Object.keys(fontSizes).map((property) => {
+    if (fontSizes[property]?.value)
+      fontSizes[property] = `${fontSizes[property]?.value}px`;
   });
   return fontSizes;
 };
 const themeFontFamily = () => {
-  const fontFamily = {...tailwindThemeTokens['fontFamily']};
-  Object.keys(fontFamily).map(property => {
+  const fontFamily = { ...tailwindThemeTokens['fontFamily'] };
+  Object.keys(fontFamily).map((property) => {
     fontFamily[property] = [fontFamily[property]['value']];
   });
   return fontFamily;
 };
-const oneLayerWithNoPixel = itemName => {
-  const fontWeight = {...tailwindThemeTokens[itemName]};
-  Object.keys(fontWeight).map(property => {
+const oneLayerWithNoPixel = (itemName) => {
+  const fontWeight = { ...tailwindThemeTokens[itemName] };
+  Object.keys(fontWeight).map((property) => {
     fontWeight[property] = fontWeight[property]?.value;
   });
   return fontWeight;
 };
 const themeShadowBox = () => {
-  const boxShadow = {...tailwindThemeTokens['boxShadow']};
-  Object.keys(boxShadow).map(property => {
+  const boxShadow = { ...tailwindThemeTokens['boxShadow'] };
+  Object.keys(boxShadow).map((property) => {
     boxShadow[property] = Object.keys(boxShadow[property]['value'])
-      .map(item => {
+      .map((item) => {
         if (item !== 'type' && item !== 'color')
           return `${boxShadow[property]['value'][item]}px`;
         if (item === 'color') return boxShadow[property]['value'][item];
@@ -37,8 +38,8 @@ const themeShadowBox = () => {
   return boxShadow;
 };
 const themeLetterSpacing = () => {
-  const letterSpacing = {...tailwindThemeTokens['letterSpacing']};
-  Object.keys(letterSpacing).map(property => {
+  const letterSpacing = { ...tailwindThemeTokens['letterSpacing'] };
+  Object.keys(letterSpacing).map((property) => {
     const valueWithNoPercentage = letterSpacing[property]?.value?.replace(
       '%',
       ''
