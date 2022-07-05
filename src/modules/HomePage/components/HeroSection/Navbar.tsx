@@ -7,9 +7,9 @@ import Logo from './assets/logo.svg';
 
 export const Navbar = (): ReactElement => {
   return (
-    <div className='navbar mx-auto flex w-5/6 justify-between bg-transparent py-xl'>
-      <div className='logo'>
-        <Logo className='h-lrg w-198' />
+    <div className='z-1 navbar relative mr-6 flex justify-between bg-transparent py-xl'>
+      <div className='logo flex items-center'>
+        <Logo className='ml-6 h-lrg w-198' />
       </div>
       <div className='navigation'>
         <ul className='flex items-center'>
@@ -36,7 +36,7 @@ const NavItem = ({ href, text }: NavProps): ReactElement => {
   return (
     <li className='mx-med cursor-pointer'>
       <Link href={href}>
-        <Typography align='center' variant='body2'>
+        <Typography align='center' variant='body1'>
           {text}
         </Typography>
       </Link>
