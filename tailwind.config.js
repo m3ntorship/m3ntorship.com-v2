@@ -79,7 +79,9 @@ module.exports = {
       'misc-standard-border': 'rgba(var(--color-misc), 0.3)',
       'misc-divider': 'rgba(var(--color-misc), 0.1)',
       'misc-rating': 'rgba(var(--color-misc-rating), <alpha-value>)',
+      // White Colors
       white: 'rgb(255, 255, 255)',
+      'white-800': 'rgb(255, 255, 255, .88)',
       black: 'rgb(0, 0, 0)',
       transparent: 'transparent',
     },
@@ -87,7 +89,16 @@ module.exports = {
     lineHeight: oneLayerWithPixelAdding('lineHeight'),
     fontFamily: themeFontFamily(),
     fontWeight: oneLayerWithNoPixel('fontWeight'),
-    spacing: oneLayerWithPixelAdding('spacing'),
+    spacing: {
+      ...oneLayerWithPixelAdding('spacing'),
+      0: '0rem', // 0px
+      7: '1.75rem', // 28px
+      12: '3rem', // 48px
+      22: '5.5rem', // 88px
+      50: '12.5rem', // 200px
+      56: '14rem', // 224px
+      106: '26.5rem', // 424px
+    },
     borderRadius: oneLayerWithPixelAdding('brd-radius'),
     opacity: oneLayerWithNoPixel('opacity'),
     borderWidth: oneLayerWithPixelAdding('brd-width'),
