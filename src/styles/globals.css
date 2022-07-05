@@ -1,118 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* #region  /**=========== Primary Color =========== */
-  /* !STARTERCONF Customize these variable, copy and paste from /styles/colors.css for list of colors */
-  --tw-color-primary-50: 240 249 255;
-  --tw-color-primary-100: 224 242 254;
-  --tw-color-primary-200: 186 230 253;
-  --tw-color-primary-300: 125 211 252;
-  --tw-color-primary-400: 56 189 248;
-  --tw-color-primary-500: 14 165 233;
-  --tw-color-primary-600: 2 132 199;
-  --tw-color-primary-700: 3 105 161;
-  --tw-color-primary-800: 7 89 133;
-  --tw-color-primary-900: 12 74 110;
-  --color-primary-50: rgb(var(--tw-color-primary-50)); /* #f0f9ff */
-  --color-primary-100: rgb(var(--tw-color-primary-100)); /* #e0f2fe */
-  --color-primary-200: rgb(var(--tw-color-primary-200)); /* #bae6fd */
-  --color-primary-300: rgb(var(--tw-color-primary-300)); /* #7dd3fc */
-  --color-primary-400: rgb(var(--tw-color-primary-400)); /* #38bdf8 */
-  --color-primary-500: rgb(var(--tw-color-primary-500)); /* #0ea5e9 */
-  --color-primary-600: rgb(var(--tw-color-primary-600)); /* #0284c7 */
-  --color-primary-700: rgb(var(--tw-color-primary-700)); /* #0369a1 */
-  --color-primary-800: rgb(var(--tw-color-primary-800)); /* #075985 */
-  --color-primary-900: rgb(var(--tw-color-primary-900)); /* #0c4a6e */
-  /* #endregion  /**======== Primary Color =========== */
-}
-
 @layer base {
-  /* inter var - latin */
-  @font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 100 900;
-    font-display: optional;
-    src: url('/fonts/inter-var-latin.woff2') format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-      U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
-      U+2215, U+FEFF, U+FFFD;
-  }
+  :root {
+    /* Primary colors*/
+    --color-primary: 0, 171, 14;
+    --color-primary-contrast: 255, 255, 255;
+    --color-primary-hover: 0, 121, 10;
 
-  .cursor-newtab {
-    cursor: url('/images/new-tab.png') 10 10, pointer;
-  }
+    /* Secondary colors */
+    --color-secondary: 0, 147, 173;
+    --color-secondary-contrast: 255, 255, 255;
+    --color-secondary-hover: 0, 104, 123;
 
-  /* #region  /**=========== Typography =========== */
-  .h0 {
-    @apply font-primary text-3xl font-bold md:text-5xl;
-  }
+    /* Text Colors */
+    --color-text: 26, 27, 26;
 
-  h1,
-  .h1 {
-    @apply font-primary text-2xl font-bold md:text-4xl;
-  }
+    /* Background Colors */
+    --color-background: 250, 250, 250;
+    --color-background-surface: 255, 255, 255;
 
-  h2,
-  .h2 {
-    @apply font-primary text-xl font-bold md:text-3xl;
-  }
+    /* Neutral Colors */
+    --color-neutral: 62, 65, 63;
 
-  h3,
-  .h3 {
-    @apply font-primary text-lg font-bold md:text-2xl;
-  }
+    /* Error Colors */
+    --color-error: 224, 35, 51;
+    --color-error-contrast: 255, 255, 255;
+    --color-error-hover: 159, 25, 36;
+    --color-error-content: 94, 15, 21;
 
-  h4,
-  .h4 {
-    @apply font-primary text-base font-bold md:text-lg;
-  }
+    /* Info Colors */
+    --color-info: 0, 149, 214;
+    --color-info-contrast: 255, 255, 255;
+    --color-info-hover: 0, 106, 152;
+    --color-info-content: 0, 63, 90;
 
-  body,
-  .p {
-    @apply font-primary text-sm md:text-base;
-  }
-  /* #endregion  /**======== Typography =========== */
+    /* Warning Colors */
+    --color-warning: 237, 169, 0;
+    --color-warning-contrast: 255, 255, 255;
+    --color-warning-hover: 168, 120, 0;
+    --color-warning-content: 100, 71, 0;
 
-  .layout {
-    /* 1100px */
-    max-width: 68.75rem;
-    @apply mx-auto w-11/12;
-  }
+    /* Success Colors */
+    --color-success: 57, 188, 52;
+    --color-success-contrast: 255, 255, 255;
+    --color-success-hover: 40, 133, 37;
+    --color-success-content: 24, 79, 22;
 
-  .bg-dark a.custom-link {
-    @apply border-gray-200 hover:border-gray-200/0;
-  }
+    /* Action Colors */
+    --color-action: 62, 65, 63;
 
-  /* Class to adjust with sticky footer */
-  .min-h-main {
-    @apply min-h-[calc(100vh-56px)];
-  }
-}
-
-@layer utilities {
-  .animated-underline {
-    background-image: linear-gradient(#33333300, #33333300),
-      linear-gradient(
-        to right,
-        var(--color-primary-400),
-        var(--color-primary-500)
-      );
-    background-size: 100% 2px, 0 2px;
-    background-position: 100% 100%, 0 100%;
-    background-repeat: no-repeat;
-  }
-  @media (prefers-reduced-motion: no-preference) {
-    .animated-underline {
-      transition: 0.3s ease;
-      transition-property: background-size, color, background-color,
-        border-color;
-    }
-  }
-  .animated-underline:hover,
-  .animated-underline:focus-visible {
-    background-size: 0 2px, 100% 2px;
+    /* Misc Colors */
+    --color-misc: 62, 65, 63;
+    --color-misc-rating: 241, 186, 51;
   }
 }
