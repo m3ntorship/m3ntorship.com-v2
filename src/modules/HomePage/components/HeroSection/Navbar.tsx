@@ -18,9 +18,9 @@ export const Navbar = (): ReactElement => {
           <NavItem href='/alumni' text='Alumni' />
           <NavItem href='/mentors' text='Mentors' />
           <NavItem href='/contacy' text='Contacy' />
-          <Button className='mx-med' variant='ghost'>
-            Apply Now
-          </Button>
+          <div className='mx-med'>
+            <Button variant='ghost'>Apply Now</Button>
+          </div>
         </ul>
       </div>
     </div>
