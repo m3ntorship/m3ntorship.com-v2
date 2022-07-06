@@ -12,13 +12,12 @@ module.exports = {
   theme: {
     extend: {
       width: {
-        "198": "198px",
-        "696": "696px",
+        198: '198px',
+        696: '696px',
       },
       spacing: oneLayerWithPixelAdding('spacing'),
     },
     colors: {
-      default: "#fafafa",
       // Primary Colors
       primary: 'rgba(var(--color-primary), <alpha-value>)',
       'primary-contrast': 'rgba(var(--color-primary-contrast), 1)',
