@@ -12,17 +12,18 @@ module.exports = {
   theme: {
     extend: {
       width: {
-       
+        container: '1216px',
         198: '198px',
         696: '696px',
       },
       spacing: {
         ...oneLayerWithPixelAdding('spacing'),
-        104: "104px",
-        106: "106px",
-        342: "342px",
-        72: "72px"
-      }
+        104: '104px',
+        106: '106px',
+        342: '342px',
+        72: '72px',
+        70: '70px',
+      },
     },
     colors: {
       // Primary Colors
