@@ -95,8 +95,11 @@ module.exports = {
       7: '1.75rem', // 28px
       12: '3rem', // 48px
       22: '5.5rem', // 88px
+      27.5: '6.875rem', // 110px
+      40.25: '10.0625rem', // 161px
       50: '12.5rem', // 200px
       56: '14rem', // 224px
+      64: '16rem', // 256px
       106: '26.5rem', // 424px
     },
     borderRadius: oneLayerWithPixelAdding('brd-radius'),

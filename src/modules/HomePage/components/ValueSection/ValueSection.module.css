@@ -3,11 +3,15 @@
 }
 
 .left-box {
-  @apply absolute left-0 translate-y-1/2 overflow-hidden rounded-lrg bg-white-800 px-xl py-7 backdrop-blur-3xl;
+  @apply absolute left-1/2 w-4/5 -translate-x-1/2 overflow-hidden rounded-lrg bg-white-800 px-xl py-lrg backdrop-blur-3xl medium:left-0 medium:w-auto medium:translate-x-0 medium:translate-y-1/2 medium:py-7;
 }
 
 .right-box {
-  @apply rounded-lrg bg-secondary py-22 pr-12 pl-56;
+  @apply mt-22 rounded-lrg bg-secondary px-lrg pb-xxl pt-40.25 medium:mt-0 medium:px-12 medium:pt-64 large:py-22 large:pr-xxl large:pl-56 xlarge:pr-12;
+}
+
+.values-wrapper {
+  @apply flex flex-col space-y-med large:flex-row large:space-x-med large:space-y-0;
 }
 
 .value-item {

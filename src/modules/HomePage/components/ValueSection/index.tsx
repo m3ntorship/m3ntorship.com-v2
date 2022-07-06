@@ -12,13 +12,13 @@ const values = [
   },
   {
     id: '2',
-    title: 'Title one',
+    title: 'Title two',
     description:
       'consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo.',
   },
   {
     id: '3',
-    title: 'Title one',
+    title: 'Title three',
     description:
       'consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo.',
   },
@@ -28,12 +28,12 @@ export default function ValueSection(): ReactElement {
   return (
     <section className={styles['value-section-wrapper']}>
       <div className={styles['left-box']}>
-        <Typography variant='h4' className='text-dark w-106'>
+        <Typography variant='h4' className='text-dark medium:w-106'>
           Semper feugiat nibh sed pulvinar
         </Typography>
       </div>
       <div className={styles['right-box']}>
-        <ul className='flex space-x-med'>
+        <ul className={styles['values-wrapper']}>
           {values.map((value) => (
             <Value key={value.id} value={value} />
           ))}
@@ -57,7 +57,7 @@ function Value({ value }: ValueProps): ReactElement {
       <Typography variant='h6' color='white' className='mb-xs text-white'>
         {value.title}
       </Typography>
-      <Typography variant='body2' className='w-50 text-white'>
+      <Typography variant='body2' className='text-white large:w-50'>
         {value.description}
       </Typography>
     </li>
