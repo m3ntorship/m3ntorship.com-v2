@@ -27,7 +27,7 @@ export default function HeroSection(): ReactElement {
                 onClick={() => {
                   alert('Hello');
                 }}
-                size='large'
+                size='lg'
                 variant='filled'
               >
                 Enroll for free
