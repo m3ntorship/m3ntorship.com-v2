@@ -87,7 +87,15 @@ module.exports = {
     lineHeight: oneLayerWithPixelAdding('lineHeight'),
     fontFamily: themeFontFamily(),
     fontWeight: oneLayerWithNoPixel('fontWeight'),
-    spacing: oneLayerWithPixelAdding('spacing'),
+    spacing: {
+      ...oneLayerWithPixelAdding('spacing'),
+      0: '0rem', // 0px
+      104.5: '26.125rem', // 418px
+      12: '3rem', // 48px
+    },
+    maxWidth: {
+      104.5: '26.125rem', // 418px
+    },
     borderRadius: oneLayerWithPixelAdding('brd-radius'),
     opacity: oneLayerWithNoPixel('opacity'),
     borderWidth: oneLayerWithPixelAdding('brd-width'),
