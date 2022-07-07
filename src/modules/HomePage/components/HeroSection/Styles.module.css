@@ -1,0 +1,17 @@
+.large-screen {
+  margin: 0 112px;
+  background-color: red;
+}
+
+.test {
+  background-color: red;
+}
+
+/* width container */
+
+.xlContainer {
+}
+
+.container {
+  position: relative;
+}
