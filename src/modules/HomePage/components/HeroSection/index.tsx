@@ -6,9 +6,14 @@ import Casual from './assets/casual.svg';
 import { Navbar } from './Navbar';
 
 export default function HeroSection(): ReactElement {
+  // const [width, setWidth] = useState(0)
+  // useEffect(() => {
+  //   setWidth(window.innerWidth)
+  //   console.log(width)
+  // }, [width])
   return (
     <div className='hero bg-background'>
-      <div className='container relative mx-auto w-container'>
+      <div className='relative small:mx-4 medium:mx-6 large:mx-8 xxlarge:mx-28'>
         <span className='absolute z-0 h-full w-96 bg-white'></span>
         <span className='absolute right-0 z-0 h-full w-696 bg-white'></span>
         <Navbar />
