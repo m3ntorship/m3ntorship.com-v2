@@ -108,6 +108,7 @@ module.exports = {
     boxShadow: themeShadowBox(),
     letterSpacing: themeLetterSpacing(),
     screens: {
+      mobile: { min: '0px', max: '899px' },
       small: '0',
       medium: '600px',
       large: '900px',
