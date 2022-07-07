@@ -12,7 +12,6 @@ module.exports = {
   theme: {
     extend: {
       width: {
-        container: '1216px',
         198: '198px',
         696: '696px',
       },
@@ -113,6 +112,7 @@ module.exports = {
       medium: '600px',
       large: '900px',
       xlarge: '1301px',
+      xxlarge: '1440px',
     },
   },
   plugins: [require('@tailwindcss/forms')],
