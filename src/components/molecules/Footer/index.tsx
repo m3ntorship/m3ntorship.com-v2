@@ -46,15 +46,12 @@ const links = {
 
 export default function Footer(): ReactElement {
   return (
-    <footer className='border flex flex-col-reverse justify-between border-misc-divider py-xxxxl medium:flex-row'>
-      <div className='flex flex-col justify-start space-y-med'>
+    <footer className={styles['footer-wrapper']}>
+      <div className={styles['info-box']}>
         <Typography variant='h6' className='text-primary-text'>
           Mentorship
         </Typography>
-        <Typography
-          variant='body1'
-          className='text-primary-text medium:max-w-104.5'
-        >
+        <Typography variant='body1' className={styles['info-text']}>
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
           sint. Velit officia consequat duis enim velit mollit. Exercitation
           veniam consequat sunt.
@@ -64,8 +61,8 @@ export default function Footer(): ReactElement {
         </Typography>
       </div>
 
-      <div className='mb-12 flex flex-col items-start medium:mb-0 medium:items-end'>
-        <ul className='mb-med flex space-x-med px-med'>
+      <div className={styles['social-links-wrapper']}>
+        <ul className={styles['social-links']}>
           {socialMedias.map((socialMedia) => (
             <li key={socialMedia.id}>
               <Link href={socialMedia.url} target='_blank'>
@@ -78,9 +75,9 @@ export default function Footer(): ReactElement {
           ))}
         </ul>
 
-        <ul className='flex flex-wrap justify-start medium:justify-end'>
+        <ul className={styles['about-links-wrapper']}>
           {links.about.map((link) => (
-            <li key={link.id} className='mb-med px-med py-xxs'>
+            <li key={link.id} className={styles['about-links']}>
               <Link href={link.route} className='text-primary-text'>
                 {link.name}
               </Link>
