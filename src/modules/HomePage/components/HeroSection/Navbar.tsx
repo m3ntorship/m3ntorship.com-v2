@@ -13,7 +13,7 @@ export const Navbar = (): ReactElement => {
   return (
     <div className='z-1 navbar relative flex flex-row justify-between bg-transparent py-xl'>
       <div className='logo flex items-center'>
-        <Logo className='ml-4 h-lrg w-198 medium:ml-8 large:mx-6' />
+        <Logo className='ml-4 h-lrg w-49.5 medium:ml-8 large:mx-6' />
       </div>
       <span className='z-50 mr-4 large:hidden'>
         <IconButton

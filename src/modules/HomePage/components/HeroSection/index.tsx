@@ -22,8 +22,8 @@ export default function HeroSection(): ReactElement {
         <div>
           <Navbar />
         </div>
-        <div className='hero-section relative z-10 flex pt-6 pb-70'>
-          <div className='info mx-6 font-inter xlarge:mr-104 xlarge:ml-106'>
+        <div className='hero-section relative z-10 flex pt-6 pb-17.5'>
+          <div className='info mx-6 font-inter xlarge:mr-26 xlarge:ml-26.5'>
             {size && (
               <Typography
                 align='left'
@@ -54,8 +54,8 @@ export default function HeroSection(): ReactElement {
               </Button>
             </div>
           </div>
-          <div className='image mr-72 hidden large:block'>
-            <Casual className='h-342 w-342' />
+          <div className='image mr-18 hidden large:block'>
+            <Casual className='h-85.5 w-85.5' />
           </div>
         </div>
       </div>

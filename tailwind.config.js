@@ -11,17 +11,14 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
-      width: {
-        198: '198px',
-        696: '696px',
-      },
       spacing: {
         ...oneLayerWithPixelAdding('spacing'),
-        104: '104px',
-        106: '106px',
-        342: '342px',
-        72: '72px',
-        70: '70px',
+        49.5: '12.375rem', // '198px' 
+        26: '6.5rem', // '104px'
+        26.5: '6.625rem', // '106px'
+        85.5: '21.375rem', // '342px'
+        18: '4.5rem', // '72px'
+        17.5: '4.375rem', // '70px'
       },
     },
     colors: {
