@@ -1,10 +1,12 @@
 import classNames from 'classnames';
-import { Button, Typography } from 'm3ntorship-ui';
+import { Button, IconButton, Typography } from 'm3ntorship-ui';
 import Link from 'next/link';
 import type { ReactElement } from 'react';
 import React, { useState } from 'react';
 
+import Arrow from './assets/arrow.svg';
 import Logo from './assets/logo.svg';
+import X from './assets/x.svg';
 
 export const Navbar = (): ReactElement => {
   const [show, setShow] = useState(false);
@@ -19,7 +21,15 @@ export const Navbar = (): ReactElement => {
           setShow(true);
         }}
       >
-        show
+        <IconButton
+          color='neutral'
+          size='sm'
+          type='button'
+          variant='text'
+          className='p-0'
+        >
+          <Arrow />
+        </IconButton>{' '}
       </span>
       <div
         className={classNames(
@@ -30,13 +40,19 @@ export const Navbar = (): ReactElement => {
         )}
       >
         <ul className='flex flex-col items-center large:flex-row'>
-          <span
-            className='z-50 mr-4 mt-8 w-full text-right large:hidden'
-            onClick={() => {
-              setShow(false);
-            }}
-          >
-            hide
+          <span className='z-50 mr-4 flex w-full justify-end pt-8 large:hidden'>
+            <IconButton
+              onClick={() => {
+                setShow(false);
+              }}
+              color='neutral'
+              size='sm'
+              type='button'
+              variant='text'
+              className='p-0'
+            >
+              <X />
+            </IconButton>
           </span>
           <NavItem href='/story' text='Story' />
           <NavItem href='/programs' text='Programs' />
