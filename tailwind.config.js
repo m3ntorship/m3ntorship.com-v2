@@ -13,7 +13,7 @@ module.exports = {
     extend: {
       spacing: {
         ...oneLayerWithPixelAdding('spacing'),
-        49.5: '12.375rem', // '198px' 
+        49.5: '12.375rem', // '198px'
         26: '6.5rem', // '104px'
         26.5: '6.625rem', // '106px'
         85.5: '21.375rem', // '342px'
