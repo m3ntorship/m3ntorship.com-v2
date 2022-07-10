@@ -31,9 +31,9 @@ export const Navbar = (): ReactElement => {
       </span>
       <div
         className={classNames(
-          'navbar mobile:absolute mobile:left-0 mobile:top-0 mobile:z-50 mobile:h-screen mobile:w-full mobile:bg-white mobile:transition-all',
+          'navbar absolute left-0 top-0 z-50 h-screen w-full bg-white transition-all large:static large:z-0 large:h-auto large:w-auto large:bg-transparent',
           {
-            'mobile:-translate-y-full mobile:transform': !show,
+            '-translate-y-full transform  large:transform-none': !show,
           }
         )}
       >
