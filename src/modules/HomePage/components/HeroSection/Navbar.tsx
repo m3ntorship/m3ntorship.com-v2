@@ -4,8 +4,8 @@ import Link from 'next/link';
 import type { ReactElement } from 'react';
 import React, { useState } from 'react';
 
-import Arrow from './assets/arrow.svg';
 import Logo from './assets/logo.svg';
+import Menu from './assets/menu.svg';
 import X from './assets/x.svg';
 
 export const Navbar = (): ReactElement => {
@@ -15,20 +15,18 @@ export const Navbar = (): ReactElement => {
       <div className='logo flex items-center'>
         <Logo className='ml-4 h-lrg w-198 medium:ml-8 large:mx-6' />
       </div>
-      <span
-        className='z-50 mr-4 large:hidden'
-        onClick={() => {
-          setShow(true);
-        }}
-      >
+      <span className='z-50 mr-4 large:hidden'>
         <IconButton
           color='neutral'
           size='sm'
           type='button'
           variant='text'
           className='p-0'
+          onClick={() => {
+            setShow(true);
+          }}
         >
-          <Arrow />
+          <Menu />
         </IconButton>{' '}
       </span>
       <div
