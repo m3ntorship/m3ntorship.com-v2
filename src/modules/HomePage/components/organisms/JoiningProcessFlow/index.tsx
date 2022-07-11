@@ -3,7 +3,7 @@ import type { FC, ReactElement } from 'react';
 
 import styles from './JoiningProcessFlow.module.css';
 
-import ProcessCard from '@/modules/HomePage/components/JoiningProcessFlow/ProcessCard';
+import { ProcessCard } from '@/modules/HomePage/components/molecules';
 
 const processSteps = [
   {

@@ -3,7 +3,7 @@ import type { FC, ReactElement } from 'react';
 
 import styles from './ProcessCard.module.css';
 
-import { IProcessCard } from '@/modules/HomePage/components/JoiningProcessFlow/ProcessCard/IPorcessCard.d';
+import { IProcessCard } from '@/modules/HomePage/components/molecules/ProcessCard/IPorcessCard.d';
 
 const ProcessCard: FC<IProcessCard.IProps> = ({
   title,
