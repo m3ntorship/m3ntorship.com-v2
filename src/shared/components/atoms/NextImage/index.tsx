@@ -1,20 +1,10 @@
-import Image, { ImageProps } from 'next/image';
+import Image from 'next/image';
 import type { ReactElement } from 'react';
 import * as React from 'react';
 
-import clsxm from '@/lib/clsxm';
+import clsxm from '@/shared/lib/clsxm';
 
-type NextImageProps = {
-  useSkeleton?: boolean;
-  imgClassName?: string;
-  blurClassName?: string;
-  alt: string;
-  width: string | number;
-} & (
-  | { width: string | number; height: string | number }
-  | { layout: 'fill'; width?: string | number; height?: string | number }
-) &
-  ImageProps;
+import { INextImageProps } from './INextImage';
 
 /**
  *
@@ -31,7 +21,7 @@ export default function NextImage({
   imgClassName,
   blurClassName,
   ...rest
-}: NextImageProps): ReactElement {
+}: INextImageProps): ReactElement {
   const [status, setStatus] = React.useState(
     useSkeleton ? 'loading' : 'complete'
   );
