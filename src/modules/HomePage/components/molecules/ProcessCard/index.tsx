@@ -11,7 +11,7 @@ const ProcessCard: FC<IProcessCard.IProps> = ({
   order,
 }): ReactElement => {
   return (
-    <div className='flex border-spacing-xs items-center bg-background-surface p-lrg shadow-shd-1'>
+    <div className={styles.card_wrapper}>
       <div className='flex items-stretch gap-lrg'>
         <div className='rounded-med bg-secondary p-sm'>
           <Typography
