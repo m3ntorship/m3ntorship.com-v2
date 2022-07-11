@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import type { ReactElement } from 'react';
 
-import { openGraph } from '@/lib/helper';
+import { openGraph } from '@/shared/lib/openGraph';
 
 // !STARTERCONF Change these default meta
 const defaultMeta = {
