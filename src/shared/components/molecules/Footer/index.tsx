@@ -49,10 +49,13 @@ export default function Footer(): ReactElement {
           ))}
         </ul>
 
-        <ul className='flex'>
+        <ul className='flex flex-wrap'>
           {links.conditions.map((link) => (
             <li key={link.id} className='px-med py-xxs'>
-              <Link href={link.route} className='text-secondary-text'>
+              <Link
+                href={link.route}
+                className='whitespace-nowrap text-secondary-text'
+              >
                 {link.name}
               </Link>
             </li>
