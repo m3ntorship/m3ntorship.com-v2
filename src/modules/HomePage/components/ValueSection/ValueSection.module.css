@@ -3,15 +3,15 @@
 }
 
 .left-box {
-  @apply absolute left-1/2 w-4/5 -translate-x-1/2 overflow-hidden rounded-lrg bg-white-800 px-xl py-lrg backdrop-blur-3xl medium:left-0 medium:w-auto medium:translate-x-0 medium:translate-y-1/2 medium:py-7 large:translate-y-1/3 xlarge:translate-y-1/2;
+  @apply absolute left-1/2 w-4/5 -translate-x-1/2 overflow-hidden rounded-lrg bg-white-800 px-xl py-lrg backdrop-blur-3xl small:left-0 small:w-auto small:translate-x-0 small:translate-y-12 small:py-7 medium:translate-y-1/3 large:translate-y-1/2;
 }
 
 .right-box {
-  @apply mt-22 rounded-lrg bg-secondary px-lrg pb-xxl pt-40.25 medium:mt-0 medium:px-12 medium:pt-64 large:pb-22 large:pt-56 large:pr-xxl large:pl-56 xlarge:pt-22 xlarge:pr-12;
+  @apply mt-22 rounded-lrg bg-secondary px-lrg pb-xxl pt-40.25 small:mt-0 small:px-12 small:pt-64 medium:pb-22 medium:pt-56 medium:pr-xxl medium:pl-56 large:pt-22 large:pr-12;
 }
 
 .values-wrapper {
-  @apply flex flex-col space-y-med large:flex-row large:space-x-med large:space-y-0;
+  @apply flex flex-col space-y-med medium:flex-row medium:space-x-med medium:space-y-0;
 }
 
 .value-item {

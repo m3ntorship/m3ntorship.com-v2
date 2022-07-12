@@ -28,7 +28,7 @@ export default function ValueSection(): ReactElement {
   return (
     <section className={styles['value-section-wrapper']}>
       <div className={styles['left-box']}>
-        <Typography variant='h4' className='text-dark medium:w-106'>
+        <Typography variant='h4' className='text-dark small:max-w-106'>
           Semper feugiat nibh sed pulvinar
         </Typography>
       </div>
@@ -54,10 +54,14 @@ interface ValueProps {
 function Value({ value }: ValueProps): ReactElement {
   return (
     <li className={styles['value-item']}>
-      <Typography variant='h6' color='white' className='mb-xs text-white'>
+      <Typography
+        variant='h6'
+        color='white'
+        className='white mb-xs whitespace-nowrap text-white'
+      >
         {value.title}
       </Typography>
-      <Typography variant='body2' className='text-white large:w-50'>
+      <Typography variant='body2' className='text-white medium:max-w-50'>
         {value.description}
       </Typography>
     </li>

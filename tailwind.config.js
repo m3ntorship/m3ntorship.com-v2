@@ -102,6 +102,10 @@ module.exports = {
       64: '16rem', // 256px
       106: '26.5rem', // 424px
     },
+    maxWidth: {
+      50: '12.5rem', // 200px
+      106: '26.5rem', // 424px
+    },
     borderRadius: oneLayerWithPixelAdding('brd-radius'),
     opacity: oneLayerWithNoPixel('opacity'),
     borderWidth: oneLayerWithPixelAdding('brd-width'),
