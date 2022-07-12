@@ -102,11 +102,17 @@ module.exports = {
     ringWidth: oneLayerWithPixelAdding('ring-width'),
     boxShadow: themeShadowBox(),
     letterSpacing: themeLetterSpacing(),
+    container: {
+      padding: {
+        small: '16px',
+        medium: '24px',
+        large: '112px',
+      },
+    },
     screens: {
-      small: '0',
-      medium: '600px',
-      large: '900px',
-      xlarge: '1301px',
+      small: '375px',
+      medium: '700px',
+      large: '1440px',
     },
   },
   plugins: [require('@tailwindcss/forms')],
