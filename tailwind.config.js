@@ -121,7 +121,7 @@ module.exports = {
       small: '375px',
       medium: '700px',
       large: '1440px',
-    }
+    },
   },
   plugins: [require('@tailwindcss/forms')],
 };

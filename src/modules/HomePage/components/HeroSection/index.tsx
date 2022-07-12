@@ -16,7 +16,7 @@ export default function HeroSection(): ReactElement {
   const size: Size = useWindowSize();
   return (
     <div className='hero bg-background'>
-      <div className='relative mx-4 medium:mx-6 medium:px-4 large:mx-8 large:px-0 xxlarge:mx-28'>
+      <div className='relative mx-4 medium:mx-6 medium:px-4 large:mx-8 large:px-0'>
         <span className='absolute z-0 h-full w-1/3  rounded-br-lrg rounded-bl-lrg bg-white shadow-shd-1'></span>
         <span className='absolute right-0 z-0 h-full w-5/12 rounded-br-lrg rounded-bl-lrg bg-white shadow-shd-1'></span>
         <div>
