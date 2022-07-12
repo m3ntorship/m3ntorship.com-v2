@@ -11,6 +11,9 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      maxWidth: {
+        '17ch': '17ch',
+      },
       spacing: {
         ...oneLayerWithPixelAdding('spacing'),
         49.5: '12.375rem', // '198px'
@@ -104,14 +107,21 @@ module.exports = {
     ringWidth: oneLayerWithPixelAdding('ring-width'),
     boxShadow: themeShadowBox(),
     letterSpacing: themeLetterSpacing(),
+    container: {
+      padding: {
+        small: '16px',
+        medium: '24px',
+        large: '112px',
+      },
+    },
     screens: {
       mobile: { min: '0px', max: '899px' },
-      small: '0',
-      medium: '600px',
-      large: '900px',
       xlarge: '1301px',
       xxlarge: '1440px',
-    },
+      small: '375px',
+      medium: '700px',
+      large: '1440px',
+    }
   },
   plugins: [require('@tailwindcss/forms')],
 };
