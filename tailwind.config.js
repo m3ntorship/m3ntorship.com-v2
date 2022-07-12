@@ -13,7 +13,7 @@ module.exports = {
     extend: {
       maxWidth: {
         '17ch': '17ch',
-        360: '90rem' // 1440px
+        360: '90rem', // 1440px
       },
       spacing: {
         ...oneLayerWithPixelAdding('spacing'),
@@ -118,7 +118,7 @@ module.exports = {
     screens: {
       small: '375px',
       medium: '700px',
-      large: "1024px",
+      large: '1024px',
       xlarge: '1440px',
     },
   },
