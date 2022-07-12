@@ -73,7 +73,7 @@ interface NavProps {
 }
 const NavItem = ({ href, text }: NavProps): ReactElement => {
   return (
-    <li className='mx-med cursor-pointer mobile:my-3'>
+    <li className='mx-med my-3 cursor-pointer large:my-auto'>
       <Link href={href}>
         <Typography align='center' variant='body1'>
           {text}
