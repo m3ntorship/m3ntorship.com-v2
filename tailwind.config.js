@@ -119,7 +119,7 @@ module.exports = {
       small: '375px',
       medium: '700px',
       large: '1024px',
-      xlarge: "1280px",
+      xlarge: '1280px',
       xxlarge: '1440px',
     },
   },

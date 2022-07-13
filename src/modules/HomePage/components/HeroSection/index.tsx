@@ -6,16 +6,10 @@ import style from './hero.module.css';
 
 import Casual from './assets/casual.svg';
 import { Navbar } from './Navbar';
-import useWindowSize from './sizeHook';
-
-// The Size Types
-interface Size {
-  width: number | undefined;
-  height: number | undefined;
-}
+import WindowSizeLessThan from './sizeHook';
 
 export default function HeroSection(): ReactElement {
-  const size: Size = useWindowSize();
+  const mobile: boolean = WindowSizeLessThan(600);
   return (
     <div className={style.mainHeroSection}>
       <div className={style.customContainer}>
@@ -26,18 +20,9 @@ export default function HeroSection(): ReactElement {
         </div>
         <div className={style.heroSectionContent}>
           <div className={style.heroSectionContentInfo}>
-            {size && (
-              <Typography
-                align='left'
-                variant={
-                  typeof size.width == 'number' && size.width <= 600
-                    ? 'h2'
-                    : 'hero'
-                }
-              >
-                Semper feugiat nibh sed pulvinar
-              </Typography>
-            )}
+            <Typography align='left' variant={mobile ? 'h2' : 'hero'}>
+              Semper feugiat nibh sed pulvinar
+            </Typography>
             <Typography variant='subtitle' className='mt-2'>
               consectetur adipiscing elit duis tristique sollicitudin nibh sit
               amet commodo nulla facilisi nullam vehicula ipsum a arc

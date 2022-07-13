@@ -4,10 +4,11 @@ import { useEffect, useState } from 'react';
 interface Size {
   width: number | undefined;
   height: number | undefined;
+  // number: number
 }
 
 // Hook
-function useWindowSize(): Size {
+function WindowSizeLessThan(testWidth: number): boolean {
   // Initialize state with undefined width/height so server and client renders match
   // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
   const [windowSize, setWindowSize] = useState<Size>({
@@ -32,7 +33,11 @@ function useWindowSize(): Size {
     // Remove event listener on cleanup
     return () => window.removeEventListener('resize', handleResize);
   }, []); // Empty array ensures that effect is only run on mount
-  return windowSize;
+
+  // create a variable that give true or false value
+  const match =
+    (windowSize && windowSize.width && windowSize.width <= testWidth) || false;
+  return match;
 }
 
-export default useWindowSize;
+export default WindowSizeLessThan;
