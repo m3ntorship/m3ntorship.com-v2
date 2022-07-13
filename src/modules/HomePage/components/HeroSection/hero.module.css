@@ -1,10 +1,10 @@
 /******************** Main Section classes ********************/
 .mainHeroSection {
-  @apply bg-background;
+  @apply mx-auto max-w-360 bg-background;
 }
 
 .customContainer {
-  @apply relative mx-4 max-w-360 medium:mx-6 medium:px-4 large:mx-8 large:px-0 xlarge:mx-auto;
+  @apply relative mx-4 max-w-360 medium:mx-6 medium:px-4 large:px-0 xlarge:mx-28;
 }
 
 .backgroundShapeOne {
