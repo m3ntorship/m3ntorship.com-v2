@@ -1,4 +1,5 @@
-import classNames from 'classnames';
+// import classNames from 'classnames';
+import { clsx } from 'clsx';
 import { Button, IconButton, Typography } from 'm3ntorship-ui';
 import Link from 'next/link';
 import type { ReactElement } from 'react';
@@ -31,9 +32,7 @@ export const Navbar = (): ReactElement => {
           <Menu />
         </IconButton>{' '}
       </span>
-      <div
-        className={classNames(style.navLinks, { '-translate-y-full': !show })}
-      >
+      <div className={clsx(style.navLinks, { '-translate-y-full': !show })}>
         <ul className={style.linksList}>
           <span className={style.closeIcon}>
             <IconButton
