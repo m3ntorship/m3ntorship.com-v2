@@ -4,7 +4,7 @@
 }
 
 .customContainer {
-  @apply xlarge:mx-28 relative mx-4 max-w-360 medium:mx-6 medium:px-4 large:px-0;
+  @apply relative mx-4 max-w-360 medium:mx-6 medium:px-4 large:px-0 xLarge:mx-28;
 }
 
 .backgroundShapeOne {
@@ -54,7 +54,7 @@
 }
 
 .heroSectionContentInfo {
-  @apply xlarge:mr-26 xlarge:ml-26.5 mx-6 font-inter;
+  @apply mx-6 font-inter xLarge:ml-26.5 xLarge:mr-26;
 }
 
 .heroSectionImageParentContainer {
