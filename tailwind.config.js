@@ -10,21 +10,6 @@ const {
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {
-      maxWidth: {
-        '17ch': '17ch',
-        360: '90rem', // 1440px
-      },
-      spacing: {
-        ...oneLayerWithPixelAdding('spacing'),
-        49.5: '12.375rem', // '198px'
-        26: '6.5rem', // '104px'
-        26.5: '6.625rem', // '106px'
-        85.5: '21.375rem', // '342px'
-        18: '4.5rem', // '72px'
-        17.5: '4.375rem', // '70px'
-      },
-    },
     colors: {
       // Primary Colors
       primary: 'rgba(var(--color-primary), <alpha-value>)',
@@ -108,20 +93,30 @@ module.exports = {
     ringWidth: oneLayerWithPixelAdding('ring-width'),
     boxShadow: themeShadowBox(),
     letterSpacing: themeLetterSpacing(),
-    container: {
-      padding: {
-        small: '16px',
-        medium: '24px',
-        large: '112px',
+    screens: {
+      small: '0px', // => @media (min-width: 0px)
+      medium: '600px', // => @media (min-width: 600px)
+      large: '900px', // => @media (min-width: 900px)
+      xLarge: '1331px', // => @media (min-width: 1331px)
+    },
+    extend: {
+      maxWidth: {
+        '17ch': '17ch',
+        360: '90rem', // 1440px
+      },
+      spacing: {
+        ...oneLayerWithPixelAdding('spacing'),
+        49.5: '12.375rem', // '198px'
+        26: '6.5rem', // '104px'
+        26.5: '6.625rem', // '106px'
+        85.5: '21.375rem', // '342px'
+        18: '4.5rem', // '72px'
+        17.5: '4.375rem', // '70px'
       },
     },
-    screens: {
-      small: '375px',
-      medium: '700px',
-      large: '1024px',
-      xlarge: '1280px',
-      xxlarge: '1440px',
-    },
+  },
+  corePlugins: {
+    container: false,
   },
   plugins: [require('@tailwindcss/forms')],
 };
