@@ -4,9 +4,10 @@ import React from 'react';
 
 import style from './hero.module.css';
 
+import WindowSizeLessThan from '@/shared/hooks/windowSize';
+
 import Casual from './assets/casual.svg';
 import { Navbar } from './Navbar';
-import WindowSizeLessThan from './sizeHook';
 
 export default function HeroSection(): ReactElement {
   const mobile: boolean = WindowSizeLessThan(600);
