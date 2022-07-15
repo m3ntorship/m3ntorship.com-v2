@@ -94,23 +94,20 @@ module.exports = {
     ringWidth: oneLayerWithPixelAdding('ring-width'),
     boxShadow: themeShadowBox(),
     letterSpacing: themeLetterSpacing(),
-    container: {
-      padding: {
-        small: '16px',
-        medium: '24px',
-        large: '112px',
-      },
-    },
     screens: {
-      small: '375px',
-      medium: '700px',
-      large: '1440px',
+      small: '0px', // => @media (min-width: 0px)
+      medium: '600px', // => @media (min-width: 600px)
+      large: '900px', // => @media (min-width: 900px)
+      xLarge: '1331px', // => @media (min-width: 1331px)
     },
     extend: {
       maxWidth: {
         '17ch': '17ch',
       },
     },
+  },
+  corePlugins: {
+    container: false,
   },
   plugins: [require('@tailwindcss/forms')],
 };
