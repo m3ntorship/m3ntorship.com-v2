@@ -1,0 +1,11 @@
+.card_wrapper {
+  @apply flex items-center rounded-lrg bg-background-surface p-lrg shadow-shd-1;
+}
+.title_wrapper {
+  @apply max-w-17ch;
+}
+@media screen and (min-width: theme('screens.small')) and (max-width: theme('screens.medium')) {
+  .title_wrapper {
+    @apply max-w-none;
+  }
+}

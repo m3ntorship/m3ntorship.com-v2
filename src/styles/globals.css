@@ -58,3 +58,9 @@
     --color-misc-rating: 241, 186, 51;
   }
 }
+
+@layer components {
+  .container {
+    @apply m-auto small:px-med medium:px-lrg large:px-xl xLarge:max-w-[1216px] xLarge:px-[0];
+  }
+}

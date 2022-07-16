@@ -1,0 +1,31 @@
+.footer-wrapper {
+  @apply container flex flex-col-reverse justify-between gap-12 border-t-thin border-t-misc-divider py-xxxxl large:flex-row;
+}
+
+.info-box {
+  @apply flex flex-col justify-start space-y-med;
+}
+
+.info-text {
+  @apply text-primary-text large:max-w-104.5;
+}
+
+.social-links-wrapper {
+  @apply flex flex-col items-start large:items-end;
+}
+
+.social-links {
+  @apply mb-med flex space-x-med px-med;
+}
+
+.about-links-wrapper {
+  @apply flex flex-wrap justify-start large:justify-end;
+}
+
+.about-links {
+  @apply mb-med px-med py-xxs;
+}
+
+.social-icon svg {
+  @apply h-lrg w-lrg fill-action;
+}
