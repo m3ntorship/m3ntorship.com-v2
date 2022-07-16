@@ -1,0 +1,19 @@
+.value-section-wrapper {
+  @apply container relative flex justify-end py-xxxxl;
+}
+
+.left-box {
+  @apply absolute left-1/2 w-4/5 -translate-x-1/2 overflow-hidden rounded-lrg bg-white-800 px-xl py-lrg backdrop-blur-3xl medium:left-0 medium:w-auto medium:translate-x-0 medium:translate-y-1/2 medium:py-7 large:translate-y-1/3 xLarge:translate-y-1/2;
+}
+
+.right-box {
+  @apply mt-22 rounded-lrg bg-secondary px-lrg pb-xxl pt-40.25 medium:mt-0 medium:px-12 medium:pt-64 large:pb-22 large:pt-56 large:pr-xxl large:pl-56 xLarge:pt-22 xLarge:pr-12;
+}
+
+.values-wrapper {
+  @apply flex flex-col space-y-med large:flex-row large:space-x-med large:space-y-0;
+}
+
+.value-item {
+  @apply flex flex-col items-start;
+}
