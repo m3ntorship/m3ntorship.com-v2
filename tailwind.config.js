@@ -87,7 +87,6 @@ module.exports = {
     lineHeight: oneLayerWithPixelAdding('lineHeight'),
     fontFamily: themeFontFamily(),
     fontWeight: oneLayerWithNoPixel('fontWeight'),
-    spacing: oneLayerWithPixelAdding('spacing'),
     borderRadius: oneLayerWithPixelAdding('brd-radius'),
     opacity: oneLayerWithNoPixel('opacity'),
     borderWidth: oneLayerWithPixelAdding('brd-width'),
@@ -103,6 +102,16 @@ module.exports = {
     extend: {
       maxWidth: {
         '17ch': '17ch',
+        360: '90rem', // 1440px
+      },
+      spacing: {
+        ...oneLayerWithPixelAdding('spacing'),
+        49.5: '12.375rem', // '198px'
+        26: '6.5rem', // '104px'
+        26.5: '6.625rem', // '106px'
+        85.5: '21.375rem', // '342px'
+        18: '4.5rem', // '72px'
+        17.5: '4.375rem', // '70px'
       },
     },
   },
