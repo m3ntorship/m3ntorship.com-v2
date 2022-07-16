@@ -1,5 +1,5 @@
 .footer-wrapper {
-  @apply flex flex-col-reverse justify-between border-t-thin border-t-misc-divider py-xxxxl medium:flex-row;
+  @apply container flex flex-col-reverse justify-between border-t-thin border-t-misc-divider py-xxxxl large:flex-row;
 }
 
 .info-box {
@@ -7,11 +7,11 @@
 }
 
 .info-text {
-  @apply text-primary-text medium:max-w-104.5;
+  @apply text-primary-text large:max-w-104.5;
 }
 
 .social-links-wrapper {
-  @apply mb-12 flex flex-col items-start medium:mb-0 medium:items-end;
+  @apply mb-12 flex flex-col items-start large:mb-0 large:items-end;
 }
 
 .social-links {
@@ -19,7 +19,7 @@
 }
 
 .about-links-wrapper {
-  @apply flex flex-wrap justify-start medium:justify-end;
+  @apply flex flex-wrap justify-start large:justify-end;
 }
 
 .about-links {
