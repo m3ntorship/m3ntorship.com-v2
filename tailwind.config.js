@@ -89,41 +89,48 @@ module.exports = {
     lineHeight: oneLayerWithPixelAdding('lineHeight'),
     fontFamily: themeFontFamily(),
     fontWeight: oneLayerWithNoPixel('fontWeight'),
-    spacing: {
-      ...oneLayerWithPixelAdding('spacing'),
-      0: '0rem', // 0px
-      7: '1.75rem', // 28px
-      12: '3rem', // 48px
-      22: '5.5rem', // 88px
-      27.5: '6.875rem', // 110px
-      40.25: '10.0625rem', // 161px
-      50: '12.5rem', // 200px
-      56: '14rem', // 224px
-      64: '16rem', // 256px
-      106: '26.5rem', // 424px
-    },
-    maxWidth: {
-      50: '12.5rem', // 200px
-      106: '26.5rem', // 424px
-    },
     borderRadius: oneLayerWithPixelAdding('brd-radius'),
     opacity: oneLayerWithNoPixel('opacity'),
     borderWidth: oneLayerWithPixelAdding('brd-width'),
     ringWidth: oneLayerWithPixelAdding('ring-width'),
     boxShadow: themeShadowBox(),
     letterSpacing: themeLetterSpacing(),
-    container: {
-      padding: {
-        small: '16px',
-        medium: '24px',
-        large: '112px',
+    screens: {
+      small: '0px', // => @media (min-width: 0px)
+      medium: '600px', // => @media (min-width: 600px)
+      large: '900px', // => @media (min-width: 900px)
+      xLarge: '1331px', // => @media (min-width: 1331px)
+    },
+    extend: {
+      maxWidth: {
+        '17ch': '17ch',
+        50: '12.5rem', // 200px
+        106: '26.5rem', // 424px
+        360: '90rem', // 1440px
+      },
+      spacing: {
+        ...oneLayerWithPixelAdding('spacing'),
+        0: '0rem', // 0px
+        7: '1.75rem', // 28px
+        12: '3rem', // 48px
+        17.5: '4.375rem', // '70px'
+        18: '4.5rem', // '72px'
+        22: '5.5rem', // 88px
+        26: '6.5rem', // '104px'
+        26.5: '6.625rem', // '106px'
+        27.5: '6.875rem', // 110px
+        40.25: '10.0625rem', // 161px
+        49.5: '12.375rem', // '198px'
+        50: '12.5rem', // 200px
+        56: '14rem', // 224px
+        64: '16rem', // 256px
+        85.5: '21.375rem', // '342px'
+        106: '26.5rem', // 424px
       },
     },
-    screens: {
-      small: '375px',
-      medium: '700px',
-      large: '1440px',
-    },
+  },
+  corePlugins: {
+    container: false,
   },
   plugins: [require('@tailwindcss/forms')],
 };

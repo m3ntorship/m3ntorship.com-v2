@@ -1,0 +1,5 @@
+@media screen and (max-width: theme('screens.small')) {
+  .card_title {
+    @apply text-48 leading-56 tracking-semi-tight3;
+  }
+}
