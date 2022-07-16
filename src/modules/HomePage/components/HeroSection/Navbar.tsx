@@ -1,9 +1,10 @@
-import { clsx } from 'clsx';
 import { Button, IconButton, Link, Typography } from 'm3ntorship-ui';
 import type { ReactElement } from 'react';
 import React, { useState } from 'react';
 
 import style from './hero.module.css';
+
+import { clsxm } from '@/shared/lib';
 
 import Logo from './assets/logo.svg';
 import Menu from './assets/menu.svg';
@@ -30,7 +31,7 @@ export const Navbar = (): ReactElement => {
           <Menu />
         </IconButton>{' '}
       </span>
-      <div className={clsx(style.navLinks, { '-translate-y-full': !show })}>
+      <div className={clsxm(style.navLinks, { '-translate-y-full': !show })}>
         <ul className={style.linksList}>
           <span className={style.closeIcon}>
             <IconButton
