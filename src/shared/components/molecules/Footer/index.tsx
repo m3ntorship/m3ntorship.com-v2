@@ -2,7 +2,7 @@ import { Link, Typography } from 'm3ntorship-ui';
 import type { ReactElement } from 'react';
 import { ReactSVG } from 'react-svg';
 
-import styles from './Footer.module.css';
+import styles from './footer.module.css';
 
 import { currentYear } from '@/shared/lib/';
 

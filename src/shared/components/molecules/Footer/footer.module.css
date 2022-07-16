@@ -1,5 +1,5 @@
 .footer-wrapper {
-  @apply container flex flex-col-reverse justify-between border-t-thin border-t-misc-divider py-xxxxl large:flex-row;
+  @apply container flex flex-col-reverse justify-between gap-12 border-t-thin border-t-misc-divider py-xxxxl large:flex-row;
 }
 
 .info-box {
@@ -11,7 +11,7 @@
 }
 
 .social-links-wrapper {
-  @apply mb-12 flex flex-col items-start large:mb-0 large:items-end;
+  @apply flex flex-col items-start large:items-end;
 }
 
 .social-links {
