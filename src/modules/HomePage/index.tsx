@@ -5,6 +5,7 @@ import {
   JoiningProcessFlow,
   ValueSection,
 } from '@/modules/HomePage/components/organisms';
+import AvailableProgramsSection from '@/modules/HomePage/components/organisms/AvailableProgramsSection';
 import { Footer } from '@/shared/components/molecules';
 
 export default function HomePage(): ReactElement {
@@ -13,6 +14,7 @@ export default function HomePage(): ReactElement {
       <HeroSection />
       <ValueSection />
       <JoiningProcessFlow />
+      <AvailableProgramsSection />
       <Footer />
     </>
   );
