@@ -1,44 +1,22 @@
 // put The JS media hook Here
 import { useEffect, useState } from 'react';
 
-// Define general type for useWindowSize hook, which includes width and height
-interface Size {
-  width: number | undefined;
-  height: number | undefined;
-  // number: number
-}
-
-// Hook
-function WindowSizeLessThan(testWidth: number): boolean {
-  // Initialize state with undefined width/height so server and client renders match
-  // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
-  const [windowSize, setWindowSize] = useState<Size>({
-    width: undefined,
-    height: undefined,
-  });
+const WindowMatchMedia = (media: string): boolean => {
+  const [match, setMatch] = useState(false);
 
   useEffect(() => {
-    // Handler to call on window resize
-    function handleResize() {
-      // Set window width/height to state
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    }
+    const handleMatch = () => {
+      setMatch(window.matchMedia(media).matches);
+    };
 
-    // Add event listener
-    window.addEventListener('resize', handleResize);
-    // Call handler right away so state gets updated with initial window size
-    handleResize();
-    // Remove event listener on cleanup
-    return () => window.removeEventListener('resize', handleResize);
-  }, []); // Empty array ensures that effect is only run on mount
+    window.addEventListener('resize', handleMatch);
 
-  // create a variable that give true or false value
-  const match =
-    (windowSize && windowSize.width && windowSize.width <= testWidth) || false;
+    handleMatch();
+
+    return () => window.removeEventListener('resize', handleMatch);
+  }, [media]);
+
   return match;
-}
+};
 
-export default WindowSizeLessThan;
+export default WindowMatchMedia;

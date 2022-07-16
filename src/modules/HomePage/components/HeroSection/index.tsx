@@ -4,13 +4,13 @@ import React from 'react';
 
 import style from './hero.module.css';
 
-import WindowSizeLessThan from '@/shared/hooks/windowSize';
+import WindowMatchMedia from '@/shared/hooks/windowSize';
 
 import Casual from './assets/casual.svg';
 import { Navbar } from './Navbar';
 
 export default function HeroSection(): ReactElement {
-  const mobile: boolean = WindowSizeLessThan(600);
+  const mobile: boolean = WindowMatchMedia('(max-width: 600px)');
   return (
     <div className={style.mainHeroSection}>
       <div className={style.customContainer}>
