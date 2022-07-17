@@ -1,8 +1,8 @@
 import type { ReactElement } from 'react';
 
-import HeroSection from '@/modules/HomePage/components/HeroSection';
 import {
   AvailableProgramsSection,
+  HeroSection,
   JoiningProcessFlow,
   ValueSection,
 } from '@/modules/HomePage/components/organisms';
