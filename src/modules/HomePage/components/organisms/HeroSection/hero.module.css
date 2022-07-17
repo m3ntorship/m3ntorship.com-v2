@@ -45,7 +45,7 @@
 }
 
 .linksListItem {
-  @apply mx-med my-3 cursor-pointer large:my-auto;
+  @apply my-3 mx-med cursor-pointer large:my-auto;
 }
 
 /******************** content section classes ********************/

@@ -79,7 +79,9 @@ module.exports = {
       'misc-standard-border': 'rgba(var(--color-misc), 0.3)',
       'misc-divider': 'rgba(var(--color-misc), 0.1)',
       'misc-rating': 'rgba(var(--color-misc-rating), <alpha-value>)',
+      // White Colors
       white: 'rgb(255, 255, 255)',
+      'white-800': 'rgb(255, 255, 255, .88)',
       black: 'rgb(0, 0, 0)',
       transparent: 'transparent',
     },
@@ -100,18 +102,32 @@ module.exports = {
       xLarge: '1331px', // => @media (min-width: 1331px)
     },
     extend: {
-      maxWidth: {
-        '17ch': '17ch',
-        360: '90rem', // 1440px
-      },
       spacing: {
         ...oneLayerWithPixelAdding('spacing'),
-        49.5: '12.375rem', // '198px'
-        26: '6.5rem', // '104px'
-        26.5: '6.625rem', // '106px'
-        85.5: '21.375rem', // '342px'
-        18: '4.5rem', // '72px'
-        17.5: '4.375rem', // '70px'
+        0: '0rem', // 0px
+        7: '1.75rem', // 28px
+        12: '3rem', // 48px
+        17.5: '4.375rem', // 70px
+        18: '4.5rem', // 72px
+        22: '5.5rem', // 88px
+        26: '6.5rem', // 104px
+        26.5: '6.625rem', // 106px
+        27.5: '6.875rem', // 110px
+        40.25: '10.0625rem', // 161px
+        49.5: '12.375rem', // 198px
+        50: '12.5rem', // 200px
+        56: '14rem', // 224px
+        64: '16rem', // 256px
+        85.5: '21.375rem', // 342px
+        104.5: '26.125rem', // 418px
+        106: '26.5rem', // 424px
+      },
+      maxWidth: {
+        '17ch': '17ch',
+        50: '12.5rem', // 200px
+        104.5: '26.125rem', // 418px
+        106: '26.5rem', // 424px
+        360: '90rem', // 1440px
       },
     },
   },
