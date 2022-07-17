@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react';
 
-import Alumni from '@/modules/HomePage/components/AlumniSection';
 import {
+  Alumni,
   HeroSection,
   JoiningProcessFlow,
   ValueSection,
