@@ -16,12 +16,12 @@ export default function AvailableProgramCard(
 ): ReactElement {
   return (
     <ProgramCard
-      Title={
+      title={
         <Typography variant='h6' component='h6'>
           {props.title}
         </Typography>
       }
-      Description={
+      description={
         <Typography
           variant='body2'
           component='p'
@@ -30,12 +30,12 @@ export default function AvailableProgramCard(
           {props.description}
         </Typography>
       }
-      Button={
+      button={
         <Button variant='filled' size='md'>
           {props.buttonLabel}
         </Button>
       }
-      Image={
+      image={
         <div className='flex h-full w-full items-center justify-center bg-background small:py-med'>
           <Image src={img} alt='program-image' />
         </div>
