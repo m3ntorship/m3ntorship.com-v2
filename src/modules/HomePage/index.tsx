@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react';
 
-import HeroSection from '@/modules/HomePage/components/HeroSection';
 import {
+  HeroSection,
   JoiningProcessFlow,
   ValueSection,
 } from '@/modules/HomePage/components/organisms';
