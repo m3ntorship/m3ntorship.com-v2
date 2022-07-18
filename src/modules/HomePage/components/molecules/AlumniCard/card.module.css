@@ -1,0 +1,23 @@
+.card {
+  @apply relative my-2 mx-4 flex h-72 w-44 items-end justify-center overflow-hidden rounded-lrg text-white hover:text-black hover:shadow-shd-2;
+}
+
+.cardImg {
+  @apply absolute left-0 top-0 z-10 h-full w-full bg-cover transition-all;
+}
+
+.cardOverlay {
+  @apply absolute left-0 top-0 z-20 h-full w-full bg-misc-overlay;
+}
+
+.cardInfo {
+  @apply relative z-30 text-center;
+}
+
+.cardIconButton {
+  @apply mx-auto mt-2 mb-6;
+}
+
+.cardButton {
+  @apply mx-auto mt-2 mb-6 hidden;
+}

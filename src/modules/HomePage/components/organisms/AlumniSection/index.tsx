@@ -13,7 +13,7 @@ const Alumni = (): ReactElement => {
             <Typography align='left' variant='h1'>
               Meet our alumni
             </Typography>
-            <Typography align='left' variant='subtitle'>
+            <Typography align='left' variant='subtitle' className='my-2'>
               consectetur adipiscing elit duis tristique sollicitudin nibh sit
               amet
             </Typography>
@@ -31,7 +31,7 @@ const Alumni = (): ReactElement => {
             </Button>
           </div>
         </div>
-        <div className='slide flex justify-between py-10'>
+        <div className='slide flex  py-10'>
           <AlumniCard
             name='Abood'
             link='www.google.com'
