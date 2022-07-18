@@ -1,6 +1,7 @@
 import type { ReactElement } from 'react';
 
 import {
+  AvailableProgramsSection,
   HeroSection,
   JoiningProcessFlow,
   ValueSection,
@@ -13,6 +14,7 @@ export default function HomePage(): ReactElement {
       <HeroSection />
       <ValueSection />
       <JoiningProcessFlow />
+      <AvailableProgramsSection />
       <Footer />
     </>
   );
