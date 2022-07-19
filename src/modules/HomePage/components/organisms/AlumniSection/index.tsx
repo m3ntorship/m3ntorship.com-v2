@@ -6,13 +6,16 @@ import styles from './alumni.module.css';
 
 import { AlumniCard } from '@/modules/HomePage/components/molecules';
 
+import WindowMatchMedia from '../../../../../shared/hooks/windowSize/index';
+
 const Alumni = (): ReactElement => {
+  const isMobile = WindowMatchMedia('(max-width: 700px)');
   return (
     <div>
       <div className='container'>
         <div className={styles.alumniInfo}>
           <div>
-            <Typography align='left' variant='h1'>
+            <Typography align='left' variant={isMobile ? 'h3' : 'h1'}>
               Meet our alumni
             </Typography>
             <Typography align='left' variant='subtitle' className='my-2'>
@@ -20,7 +23,8 @@ const Alumni = (): ReactElement => {
               amet
             </Typography>
           </div>
-          <div>
+          {/* <div className={notMobile ? '' : 'hidden'}> */}
+          <div className='hidden large:block'>
             <Button
               color='neutral'
               onClick={() => {
@@ -64,6 +68,20 @@ const Alumni = (): ReactElement => {
             link='www.google.com'
             img='https://p3.toutiaoimg.com/origin/pgc-image/35c1285e7f234266beb9102210385713?from=pc'
           />
+        </div>
+        {/* <div className={notMobile ? 'hidden' : ' my-12'}> */}
+        <div className='my-12 large:hidden'>
+          <Button
+            className='w-full medium:w-auto'
+            color='neutral'
+            onClick={() => {
+              window.alert('Work Well');
+            }}
+            size='md'
+            variant='ghost'
+          >
+            View all alumni
+          </Button>
         </div>
       </div>
     </div>
