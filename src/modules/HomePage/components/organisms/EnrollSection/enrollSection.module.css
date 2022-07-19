@@ -1,0 +1,11 @@
+.enroll-wrapper {
+  @apply relative flex flex-col items-center overflow-hidden;
+}
+
+.github-bg {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+
+.enroll-text {
+  @apply z-10 mb-16 max-w-204;
+}
