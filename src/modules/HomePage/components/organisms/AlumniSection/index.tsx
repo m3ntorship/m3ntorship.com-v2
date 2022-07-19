@@ -2,13 +2,15 @@ import { Button, Typography } from 'm3ntorship-ui';
 import type { ReactElement } from 'react';
 import React from 'react';
 
+import styles from './alumni.module.css';
+
 import { AlumniCard } from '@/modules/HomePage/components/molecules';
 
 const Alumni = (): ReactElement => {
   return (
-    <div className='alumni'>
+    <div>
       <div className='container'>
-        <div className='info flex items-center justify-between'>
+        <div className={styles.alumniInfo}>
           <div>
             <Typography align='left' variant='h1'>
               Meet our alumni
@@ -31,7 +33,7 @@ const Alumni = (): ReactElement => {
             </Button>
           </div>
         </div>
-        <div className='slide flex grid-flow-col overflow-x-scroll py-10 medium:flex-wrap medium:overflow-x-visible xLarge:flex-nowrap'>
+        <div className={styles.alumniSlide}>
           <AlumniCard
             name='Abood'
             link='www.google.com'

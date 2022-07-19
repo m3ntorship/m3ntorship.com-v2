@@ -13,7 +13,7 @@ interface Card {
 
 const AlumniCard = ({ name, img }: Card): ReactElement => {
   return (
-    <div className='flex justify-center medium:w-1/2 large:w-auto'>
+    <div className={styles.parentCard}>
       <div className={`${styles.card} group`}>
         <div
           className={`${styles.cardImg} group-hover:h-3/5`}
@@ -35,7 +35,6 @@ const AlumniCard = ({ name, img }: Card): ReactElement => {
               View
             </Link>
           </Button>
-          {/* <a href={link}> View Profile </a> */}
         </div>
       </div>
     </div>

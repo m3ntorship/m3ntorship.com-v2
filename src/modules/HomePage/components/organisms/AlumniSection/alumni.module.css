@@ -1,0 +1,7 @@
+.alumniInfo {
+  @apply flex items-center justify-between;
+}
+
+.alumniSlide {
+  @apply flex grid-flow-col overflow-x-scroll py-10 medium:flex-wrap medium:overflow-x-visible xLarge:flex-nowrap;
+}

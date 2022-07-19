@@ -1,3 +1,7 @@
+.parentCard {
+  @apply flex justify-center medium:w-1/2 large:w-auto;
+}
+
 .card {
   @apply relative my-2 mx-4 flex h-80 w-64 max-w-106 items-end justify-center overflow-hidden rounded-lrg text-white hover:text-black hover:shadow-shd-2 large:w-44;
 }
