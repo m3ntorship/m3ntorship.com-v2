@@ -31,7 +31,7 @@ const Alumni = (): ReactElement => {
             </Button>
           </div>
         </div>
-        <div className='slide flex  py-10'>
+        <div className='slide flex grid-flow-col overflow-x-scroll py-10 medium:flex-wrap medium:overflow-x-visible xLarge:flex-nowrap'>
           <AlumniCard
             name='Abood'
             link='www.google.com'
