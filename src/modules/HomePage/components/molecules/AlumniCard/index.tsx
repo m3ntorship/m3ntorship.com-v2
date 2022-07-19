@@ -1,4 +1,4 @@
-import { Button, IconButton, Typography } from 'm3ntorship-ui';
+import { Button, IconButton, Link, Typography } from 'm3ntorship-ui';
 import type { ReactElement } from 'react';
 import React from 'react';
 
@@ -31,7 +31,9 @@ const AlumniCard = ({ name, img }: Card): ReactElement => {
             <AlmniIcon />
           </IconButton>
           <Button className={`${styles.cardButton} group-hover:block`}>
-            View
+            <Link className='text-white' href='/'>
+              View
+            </Link>
           </Button>
           {/* <a href={link}> View Profile </a> */}
         </div>
