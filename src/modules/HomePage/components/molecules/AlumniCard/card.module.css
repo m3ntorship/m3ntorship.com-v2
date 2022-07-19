@@ -7,7 +7,7 @@
 }
 
 .cardImg {
-  @apply absolute left-0 top-0 z-10 h-full w-full bg-cover transition-all;
+  @apply absolute left-0 top-0 z-10 h-full w-full object-cover;
 }
 
 .cardOverlay {
@@ -15,7 +15,7 @@
 }
 
 .cardInfo {
-  @apply relative z-30 text-center;
+  @apply relative z-30 w-full pt-5 text-center transition-all;
 }
 
 .cardIconButton {
