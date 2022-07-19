@@ -3,6 +3,7 @@ import type { ReactElement } from 'react';
 import {
   Alumni,
   AvailableProgramsSection,
+  EnrollSection,
   HeroSection,
   JoiningProcessFlow,
   ValueSection,
@@ -17,6 +18,7 @@ export default function HomePage(): ReactElement {
       <JoiningProcessFlow />
       <AvailableProgramsSection />
       <Alumni />
+      <EnrollSection />
       <Footer />
     </>
   );
