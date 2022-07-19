@@ -7,11 +7,11 @@ import styles from './card.module.css';
 import AlmniIcon from './assets/alumniIcon.svg';
 interface Card {
   name: string;
-  link?: string;
+  link: string;
   img: string;
 }
 
-const AlumniCard = ({ name, img }: Card): ReactElement => {
+const AlumniCard = ({ name, img, link }: Card): ReactElement => {
   return (
     <div className={styles.parentCard}>
       <div className={`${styles.card} group`}>
@@ -31,7 +31,7 @@ const AlumniCard = ({ name, img }: Card): ReactElement => {
             <AlmniIcon />
           </IconButton>
           <Button className={`${styles.cardButton} group-hover:block`}>
-            <Link className='text-white' href='/'>
+            <Link className='text-white' href={link}>
               View
             </Link>
           </Button>
