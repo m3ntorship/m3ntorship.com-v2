@@ -13,32 +13,32 @@ const alumniData = [
   {
     name: 'Abood',
     link: '/',
-    img: 'https://p3.toutiaoimg.com/origin/pgc-image/35c1285e7f234266beb9102210385713?from=pc',
+    img: 'https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
   },
   {
     name: 'Abood 2',
     link: '/',
-    img: 'https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?w=2000',
+    img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
   },
   {
     name: 'Monaliza',
     link: '/',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Mona_Lisa-restored.jpg/640px-Mona_Lisa-restored.jpg',
+    img: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
   },
   {
     name: 'Obama',
     link: '/',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Poster-sized_portrait_of_Barack_Obama.jpg/768px-Poster-sized_portrait_of_Barack_Obama.jpg',
+    img: 'https://images.unsplash.com/photo-1580130379624-3a069adbffc5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=426&q=80',
   },
   {
     name: 'El7ag',
     link: '/',
-    img: 'https://images.unsplash.com/photo-1493106819501-66d381c466f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydHJhaXQlMjBmYWNlc3xlbnwwfHwwfHw%3D&w=1000&q=80',
+    img: 'https://images.unsplash.com/photo-1520853504280-249b72dc947c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
   },
   {
     name: 'Nancy',
     link: '/',
-    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1dNQk_tdAmKOg3vO_1grdMG4agi7sezz9wQ&usqp=CAU',
+    img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80',
   },
 ];
 
