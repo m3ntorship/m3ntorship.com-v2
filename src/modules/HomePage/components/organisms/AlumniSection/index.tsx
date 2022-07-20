@@ -45,48 +45,20 @@ const alumniData = [
 const Alumni = (): ReactElement => {
   const isMobile = WindowMatchMedia('(max-width: 700px)');
   return (
-    <div>
-      <div className='container'>
-        <div className={styles.alumniInfo}>
-          <div>
-            <Typography align='left' variant={isMobile ? 'h3' : 'h1'}>
-              Meet our alumni
-            </Typography>
-            <Typography align='left' variant='subtitle' className='my-2'>
-              consectetur adipiscing elit duis tristique sollicitudin nibh sit
-              amet
-            </Typography>
-          </div>
-          {/* <div className={notMobile ? '' : 'hidden'}> */}
-          <div className='hidden large:block'>
-            <Button
-              color='neutral'
-              onClick={() => {
-                window.alert('Work Well');
-              }}
-              size='md'
-              variant='ghost'
-            >
-              View all alumni
-            </Button>
-          </div>
+    <section>
+      <div className={styles.alumniInfo}>
+        <div>
+          <Typography align='left' variant={isMobile ? 'h3' : 'h1'}>
+            Meet our alumni
+          </Typography>
+          <Typography align='left' variant='subtitle' className='my-2'>
+            consectetur adipiscing elit duis tristique sollicitudin nibh sit
+            amet
+          </Typography>
         </div>
-        <div className={styles.alumniSlide}>
-          {alumniData.map((alumni, index): ReactElement => {
-            return (
-              <AlumniCard
-                key={index}
-                name={alumni.name}
-                link={alumni.link}
-                img={alumni.img}
-              />
-            );
-          })}
-        </div>
-        {/* <div className={notMobile ? 'hidden' : ' my-12'}> */}
-        <div className='my-12 large:hidden'>
+        {/* <div className={notMobile ? '' : 'hidden'}> */}
+        <div className='hidden large:block'>
           <Button
-            className='w-full medium:w-auto'
             color='neutral'
             onClick={() => {
               window.alert('Work Well');
@@ -98,7 +70,33 @@ const Alumni = (): ReactElement => {
           </Button>
         </div>
       </div>
-    </div>
+      <div className={styles.alumniSlide}>
+        {alumniData.map((alumni, index): ReactElement => {
+          return (
+            <AlumniCard
+              key={index}
+              name={alumni.name}
+              link={alumni.link}
+              img={alumni.img}
+            />
+          );
+        })}
+      </div>
+      {/* <div className={notMobile ? 'hidden' : ' my-12'}> */}
+      <div className='my-12 large:hidden'>
+        <Button
+          className='w-full medium:w-auto'
+          color='neutral'
+          onClick={() => {
+            window.alert('Work Well');
+          }}
+          size='md'
+          variant='ghost'
+        >
+          View all alumni
+        </Button>
+      </div>
+    </section>
   );
 };
 

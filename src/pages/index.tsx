@@ -2,6 +2,7 @@ import type { ReactElement } from 'react';
 import * as React from 'react';
 
 import HomePage from '@/modules/HomePage';
+import { DefaultLayout } from '@/shared/hocs';
 
 /**
  * SVGR Support
@@ -16,5 +17,13 @@ import HomePage from '@/modules/HomePage';
 // to customize the default configuration.
 
 export default function Home(): ReactElement {
-  return <HomePage />;
+  const seoData = {
+    templateTitle: 'Home',
+  };
+
+  return (
+    <DefaultLayout seoData={seoData}>
+      <HomePage />
+    </DefaultLayout>
+  );
 }

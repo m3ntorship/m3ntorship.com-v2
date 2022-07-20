@@ -5,9 +5,13 @@ import { RiAlarmWarningFill } from 'react-icons/ri';
 import { Seo } from '@/shared/components/molecules';
 
 export default function NotFoundPage(): ReactElement {
+  const seoData = {
+    templateTitle: 'Not Found',
+  };
+
   return (
     <>
-      <Seo templateTitle='Not Found' />
+      <Seo seoData={seoData} />
 
       <main>
         <section className='bg-white'>
