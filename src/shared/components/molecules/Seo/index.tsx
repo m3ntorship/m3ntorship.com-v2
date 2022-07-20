@@ -2,43 +2,38 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import type { ReactElement } from 'react';
 
+import { ISeoProps } from '@/shared/components/molecules/Seo/ISeo';
 import { openGraph } from '@/shared/lib/openGraph';
 
-// !STARTERCONF Change these default meta
 const defaultMeta = {
-  title: 'Next.js + Tailwind CSS + TypeScript Starter',
-  siteName: 'Next.js + Tailwind CSS + TypeScript Starter',
+  title: 'M3ntorship',
+  siteName: 'M3ntorship',
   description:
-    'A starter for Next.js, Tailwind CSS, and TypeScript with Absolute Import, Seo, Link component, pre-configured with Husky',
+    'Start your software engineering career by working on real world projects with large team of software engineers',
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
-  url: 'https://tsnext-tw.thcl.dev',
+  url: 'https://m3ntorship-v2.herokuapp.com',
   type: 'website',
   robots: 'follow, index',
   /** No need to be filled, will be populated with openGraph function */
   image: '',
 };
 
-type SeoProps = {
-  date?: string;
-  templateTitle?: string;
-} & Partial<typeof defaultMeta>;
-
-export default function Seo(props: SeoProps): ReactElement {
+export default function Seo({ seoData }: ISeoProps): ReactElement {
   const router = useRouter();
   const meta = {
     ...defaultMeta,
-    ...props,
+    ...seoData,
   };
-  meta['title'] = props.templateTitle
-    ? `${props.templateTitle} | ${meta.siteName}`
+  meta['title'] = seoData?.templateTitle
+    ? `${seoData.templateTitle} | ${meta.siteName}`
     : meta.title;
 
   // Use siteName if there is templateTitle
   // but show full title if there is none
   meta['image'] = openGraph({
     description: meta.description,
-    siteName: props.templateTitle ? meta.siteName : meta.title,
-    templateTitle: props.templateTitle,
+    siteName: seoData.templateTitle ? meta.siteName : meta.title,
+    templateTitle: seoData.templateTitle,
   });
 
   return (
