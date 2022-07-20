@@ -1,0 +1,27 @@
+.parentCard {
+  @apply flex justify-center medium:w-1/2 large:w-auto;
+}
+
+.card {
+  @apply relative my-2 mx-4 flex h-80 w-64 max-w-106 items-end justify-center overflow-hidden rounded-lrg text-white hover:text-black hover:shadow-shd-2 large:w-44;
+}
+
+.cardImg {
+  @apply absolute left-0 top-0 z-10 h-full w-full object-cover;
+}
+
+.cardOverlay {
+  @apply absolute left-0 top-0 z-20 h-full w-full bg-misc-overlay;
+}
+
+.cardInfo {
+  @apply relative z-30 w-full pt-5 text-center transition-all;
+}
+
+.cardIconButton {
+  @apply mx-auto mt-2 mb-6;
+}
+
+.cardButton {
+  @apply mx-auto mt-2 mb-6 hidden;
+}

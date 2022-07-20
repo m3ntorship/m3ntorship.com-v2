@@ -1,3 +1,4 @@
+export { default as Alumni } from './AlumniSection';
 export { default as AvailableProgramsSection } from './AvailableProgramsSection';
 export { default as EnrollSection } from './EnrollSection';
 export { default as HeroSection } from './HeroSection';
