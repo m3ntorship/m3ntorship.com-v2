@@ -8,7 +8,6 @@ import {
   JoiningProcessFlow,
   ValueSection,
 } from '@/modules/HomePage/components/organisms';
-import { Footer } from '@/shared/components/molecules';
 
 export default function HomePage(): ReactElement {
   return (
@@ -19,7 +18,6 @@ export default function HomePage(): ReactElement {
       <AvailableProgramsSection />
       <Alumni />
       <EnrollSection />
-      <Footer />
     </>
   );
 }

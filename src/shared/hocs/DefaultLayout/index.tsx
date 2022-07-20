@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react';
 
-import { Seo } from '@/shared/components/molecules';
+import { Footer, Seo } from '@/shared/components/molecules';
 import { ISeoProps } from '@/shared/components/molecules/Seo/ISeo';
 
 interface IDefaultLayoutProps extends ISeoProps {
@@ -16,7 +16,10 @@ export default function DefaultLayout({
       <Seo seoData={seoData} />
 
       <div className='bg-background'>
-        <div className='container'>{children}</div>
+        <div className='container space-y-20'>
+          {children}
+          <Footer />
+        </div>
       </div>
     </>
   );

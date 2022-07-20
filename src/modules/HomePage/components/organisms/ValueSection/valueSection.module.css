@@ -1,5 +1,5 @@
 .value-section-wrapper {
-  @apply container relative flex justify-end py-xxxxl;
+  @apply relative flex justify-end;
 }
 
 .left-box {
