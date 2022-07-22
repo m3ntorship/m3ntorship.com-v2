@@ -4,13 +4,9 @@ RUN mkdir /home/node/app/
 
 WORKDIR /home/node/app
 
-COPY package.json package.json
-COPY yarn.lock yarn.lock
+COPY . .
 
-RUN yarn && yarn build 
-
-COPY .next .next
-COPY public public
+RUN yarn && yarn build
 
 EXPOSE 3000
 
