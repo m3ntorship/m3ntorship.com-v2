@@ -7,7 +7,7 @@ WORKDIR /home/node/app
 COPY package.json package.json
 COPY yarn.lock yarn.lock
 
-RUN yarn
+RUN yarn && yarn build 
 
 COPY .next .next
 COPY public public
