@@ -1,0 +1,21 @@
+name: Deploy m3ntorship-v2 to heroku
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout last commit
+        uses: actions/checkout@v2
+
+      - name: use heroku-deploy action to build and deploy the app
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: 'm3ntorship-v2'
+          heroku_email: 'abdalrahmanyousif@gmail.com'
+          usedocker: true
