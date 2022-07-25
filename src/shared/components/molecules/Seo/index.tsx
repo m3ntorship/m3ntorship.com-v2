@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import type { ReactElement } from 'react';
 
 import { ISeoProps } from '@/shared/components/molecules/Seo/ISeo';
-import { openGraph } from '@/shared/lib/openGraph';
+import { isDevelopment } from '@/shared/constants';
 
 const defaultMeta = {
   title: 'M3ntorship',
@@ -13,7 +13,7 @@ const defaultMeta = {
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
   url: 'https://m3ntorship-v2.herokuapp.com',
   type: 'website',
-  robots: 'follow, index',
+  robots: !isDevelopment ? 'follow, index' : 'nofollow, noindex',
   /** No need to be filled, will be populated with openGraph function */
   image: '',
 };
@@ -28,33 +28,30 @@ export default function Seo({ seoData }: ISeoProps): ReactElement {
     ? `${seoData.templateTitle} | ${meta.siteName}`
     : meta.title;
 
-  // Use siteName if there is templateTitle
-  // but show full title if there is none
-  meta['image'] = openGraph({
-    description: meta.description,
-    siteName: seoData.templateTitle ? meta.siteName : meta.title,
-    templateTitle: seoData.templateTitle,
-  });
-
   return (
     <Head>
       <title>{meta.title}</title>
       <meta name='robots' content={meta.robots} />
-      <meta content={meta.description} name='description' />
-      <meta property='og:url' content={`${meta.url}${router.asPath}`} />
+      <meta name='title' content={meta.title} />
+      <meta name='description' content={meta.description} />
       <link rel='canonical' href={`${meta.url}${router.asPath}`} />
+
       {/* Open Graph */}
       <meta property='og:type' content={meta.type} />
-      <meta property='og:site_name' content={meta.siteName} />
-      <meta property='og:description' content={meta.description} />
+      <meta property='og:url' content={`${meta.url}${router.asPath}`} />
       <meta property='og:title' content={meta.title} />
-      <meta name='image' property='og:image' content={meta.image} />
+      <meta property='og:description' content={meta.description} />
+      <meta property='og:image' name='image' content={meta.image} />
+      <meta property='og:site_name' content={meta.siteName} />
+
       {/* Twitter */}
       <meta name='twitter:card' content='summary_large_image' />
+      <meta name='twitter:url' content={`${meta.url}${router.asPath}`} />
       <meta name='twitter:site' content='@th_clarence' />
       <meta name='twitter:title' content={meta.title} />
       <meta name='twitter:description' content={meta.description} />
       <meta name='twitter:image' content={meta.image} />
+
       {meta.date && (
         <>
           <meta property='article:published_time' content={meta.date} />

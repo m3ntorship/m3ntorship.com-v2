@@ -19,6 +19,7 @@ import { DefaultLayout } from '@/shared/hocs';
 export default function Home(): ReactElement {
   const seoData = {
     templateTitle: 'Home',
+    image: '/images/home-page/casual.png',
   };
 
   return (
