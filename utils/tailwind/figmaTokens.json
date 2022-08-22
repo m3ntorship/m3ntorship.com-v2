@@ -245,6 +245,10 @@
     "xxxxl": {
       "value": "80",
       "type": "spacing"
+    },
+    "xxxxxl": {
+      "value": "770",
+      "type": "spacing"
     }
   },
   "fontWeight": {
