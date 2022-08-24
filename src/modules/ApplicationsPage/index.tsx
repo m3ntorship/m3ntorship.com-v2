@@ -3,10 +3,14 @@ import Mentee from 'public/images/applications-page/mentee.svg';
 import Mentor from 'public/images/applications-page/mentor.svg';
 import { ReactElement, useState } from 'react';
 
-import ApplicationsTab from '@/modules/ApplicationsPage/components/ApplicaitonsTab';
-import ApplicationsHeader from '@/modules/ApplicationsPage/components/ApplicationsHeader';
-import MenteeApplication from '@/modules/ApplicationsPage/components/MenteeApplication';
-import MentorApplication from '@/modules/ApplicationsPage/components/MentorApplication';
+import {
+  ApplicationsHeader,
+  ApplicationsTab,
+} from '@/modules/ApplicationsPage/components/molecules/';
+import {
+  MenteeApplication,
+  MentorApplication,
+} from '@/modules/ApplicationsPage/components/organisms/';
 
 export default function ApplicationsPage(): ReactElement {
   const [activeTab, setActiveTab] = useState('mentee');
@@ -24,7 +28,7 @@ export default function ApplicationsPage(): ReactElement {
     <div className='flex flex-col items-center justify-center '>
       <ApplicationsHeader />
 
-      <div className='mt-16 w-full  p-14 medium:w-xxxxxl'>
+      <div className='mt-16 w-full p-14 large:w-xxxxxl'>
         {currentStep === 1 && (
           <>
             <Typography variant='h4'>
