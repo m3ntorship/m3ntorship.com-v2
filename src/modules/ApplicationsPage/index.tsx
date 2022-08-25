@@ -3,10 +3,14 @@ import Mentee from 'public/images/applications-page/mentee.svg';
 import Mentor from 'public/images/applications-page/mentor.svg';
 import { ReactElement, useState } from 'react';
 
-import ApplicationsHeader from '@/modules/ApplicationsPage/components/ApplicationsHeader';
-import ApplicationsTab from '@/modules/ApplicationsPage/components/ApplicationsTab';
-import MenteeApplication from '@/modules/ApplicationsPage/components/MenteeApplication';
-import MentorApplication from '@/modules/ApplicationsPage/components/MentorApplication';
+import {
+  ApplicationsHeader,
+  ApplicationsTab,
+} from '@/modules/ApplicationsPage/components/molecules/';
+import {
+  MenteeApplication,
+  MentorApplication,
+} from '@/modules/ApplicationsPage/components/organisms/';
 
 enum activeTabEnum {
   MENTOR = 'mentor',
@@ -15,7 +19,7 @@ enum activeTabEnum {
 
 export default function ApplicationsPage(): ReactElement {
   const [activeTab, setActiveTab] = useState<null | activeTabEnum>(null);
-  const [currentStep, setCurrentStep] = useState<number>(1);
+  const [currentStep, setCurrentStep] = useState(1);
 
   const menteeHandleClick = (): void => {
     setActiveTab(activeTabEnum.MENTEE);
@@ -29,7 +33,7 @@ export default function ApplicationsPage(): ReactElement {
     <div className='flex flex-col items-center justify-center '>
       <ApplicationsHeader />
 
-      <div className='mt-16 w-full  p-14 medium:w-xxxxxl'>
+      <div className='mt-16 w-full p-14 large:w-xxxxxl'>
         {currentStep === 1 && (
           <>
             <Typography variant='h4'>
@@ -64,13 +68,13 @@ export default function ApplicationsPage(): ReactElement {
           </>
         )}
 
-        {activeTab === 'mentee' && (
+        {activeTab === activeTabEnum.MENTEE && (
           <MenteeApplication
             currentStep={currentStep}
             setCurrentStep={setCurrentStep}
           />
         )}
-        {activeTab === 'mentor' && <MentorApplication />}
+        {activeTab === activeTabEnum.MENTOR && <MentorApplication />}
       </div>
     </div>
   );
