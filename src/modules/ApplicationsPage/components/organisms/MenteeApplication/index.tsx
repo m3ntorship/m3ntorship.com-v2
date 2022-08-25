@@ -4,7 +4,10 @@ import ArrowRight from 'public/images/applications-page/arrow-right.svg';
 import Submit from 'public/images/applications-page/submit.svg';
 import { ReactElement } from 'react';
 
-import { MenteeApplicationStepOne } from '@/modules/ApplicationsPage/components/molecules/';
+import {
+  MenteeApplicationStepOne,
+  MenteeApplicationStepTwo,
+} from '@/modules/ApplicationsPage/components/molecules/';
 
 interface MenteeApplicationProps {
   currentStep: number;
@@ -33,6 +36,7 @@ const MenteeApplication = ({
       <Progress value={currentStep} maxValue={3} />
       <div className='mt-12 mb-10'>
         {currentStep === 1 && <MenteeApplicationStepOne />}
+        {currentStep === 2 && <MenteeApplicationStepTwo />}
       </div>
       <div className='flex flex-col medium:flex-row medium:justify-between'>
         <Button
