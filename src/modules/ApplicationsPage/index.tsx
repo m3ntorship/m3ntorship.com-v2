@@ -12,16 +12,21 @@ import {
   MentorApplication,
 } from '@/modules/ApplicationsPage/components/organisms/';
 
-export default function ApplicationsPage(): ReactElement {
-  const [activeTab, setActiveTab] = useState('mentee');
-  const [currentStep, setCurrentStep] = useState(3);
+enum activeTabEnum {
+  MENTOR = 'mentor',
+  MENTEE = 'mentee',
+}
 
-  const menteeHanleClick = (): void => {
-    setActiveTab('mentee');
+export default function ApplicationsPage(): ReactElement {
+  const [activeTab, setActiveTab] = useState<null | activeTabEnum>(null);
+  const [currentStep, setCurrentStep] = useState(1);
+
+  const menteeHandleClick = (): void => {
+    setActiveTab(activeTabEnum.MENTEE);
   };
 
-  const mentorHanleClick = (): void => {
-    setActiveTab('mentor');
+  const mentorHandleClick = (): void => {
+    setActiveTab(activeTabEnum.MENTOR);
   };
 
   return (
@@ -36,8 +41,8 @@ export default function ApplicationsPage(): ReactElement {
             </Typography>
             <div className='mt-10 flex'>
               <ApplicationsTab
-                active={activeTab === 'mentee'}
-                onClick={menteeHanleClick}
+                active={activeTab === activeTabEnum.MENTEE}
+                onClick={menteeHandleClick}
               >
                 <div className='flex items-center justify-center'>
                   <Mentee className='hidden h-14  w-16 medium:block' />
@@ -48,8 +53,8 @@ export default function ApplicationsPage(): ReactElement {
               </ApplicationsTab>
               <div className='ml-2'>
                 <ApplicationsTab
-                  active={activeTab === 'mentor'}
-                  onClick={mentorHanleClick}
+                  active={activeTab === activeTabEnum.MENTOR}
+                  onClick={mentorHandleClick}
                 >
                   <div className='flex items-center justify-center'>
                     <Mentor className='hidden h-14 w-16 medium:block' />
@@ -63,13 +68,13 @@ export default function ApplicationsPage(): ReactElement {
           </>
         )}
 
-        {activeTab === 'mentee' && (
+        {activeTab === activeTabEnum.MENTEE && (
           <MenteeApplication
             currentStep={currentStep}
             setCurrentStep={setCurrentStep}
           />
         )}
-        {activeTab === 'mentor' && <MentorApplication />}
+        {activeTab === activeTabEnum.MENTOR && <MentorApplication />}
       </div>
     </div>
   );

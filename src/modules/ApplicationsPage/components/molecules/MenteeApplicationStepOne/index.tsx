@@ -22,7 +22,7 @@ const MenteeApplicationStepOne = (): ReactElement => {
         <Radio label='20' id='20' name='hours' />
         <Radio label='25' id='25' name='hours' />
         <Radio label='30' id='30' name='hours' />
-        <Radio label='+30' id='plus-25' name='hours' />
+        <Radio label='+30' id='plus-30' name='hours' />
       </div>
 
       <div className='my-4'>
