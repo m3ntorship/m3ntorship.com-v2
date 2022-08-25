@@ -68,13 +68,13 @@ export default function ApplicationsPage(): ReactElement {
           </>
         )}
 
-        {activeTab === 'mentee' && (
+        {activeTab === activeTabEnum.MENTEE && (
           <MenteeApplication
             currentStep={currentStep}
             setCurrentStep={setCurrentStep}
           />
         )}
-        {activeTab === 'mentor' && <MentorApplication />}
+        {activeTab === activeTabEnum.MENTOR && <MentorApplication />}
       </div>
     </div>
   );
