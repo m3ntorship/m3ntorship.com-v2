@@ -28,17 +28,13 @@ const MenteeApplicationStepThree = (): ReactElement => {
           <SelectInput
             placeholder='choose'
             options={occupationOptions}
+            errorMessage={errors['occupation']?.message}
+            error={Boolean(errors['occupation'])}
             {...field}
             ref={null}
           />
         )}
       />
-
-      {errors['occupation'] && (
-        <Typography variant='body1' className='mt-2 text-error'>
-          <>{errors['occupation']?.message}</>
-        </Typography>
-      )}
 
       <div className='my-4'>
         <Typography variant='subtitle'>What is your name? *</Typography>
@@ -53,6 +49,7 @@ const MenteeApplicationStepThree = (): ReactElement => {
             {...field}
             ref={null}
             errorMessage={errors['applicantName']?.message}
+            error={Boolean(errors['applicantName'])}
           />
         )}
       />
@@ -72,6 +69,7 @@ const MenteeApplicationStepThree = (): ReactElement => {
             {...field}
             ref={null}
             errorMessage={errors['applicantEmail']?.message}
+            error={Boolean(errors['applicantEmail'])}
           />
         )}
       />
@@ -89,17 +87,13 @@ const MenteeApplicationStepThree = (): ReactElement => {
           <SelectInput
             placeholder='choose'
             options={howDidYouHearQuestionOptions}
+            errorMessage={errors['applicantResource']?.message}
+            error={Boolean(errors['applicantResource'])}
             {...field}
             ref={null}
           />
         )}
       />
-
-      {errors['applicantResource'] && (
-        <Typography variant='body1' className='mt-2 text-error'>
-          <>{errors['applicantResource']?.message}</>
-        </Typography>
-      )}
     </div>
   );
 };

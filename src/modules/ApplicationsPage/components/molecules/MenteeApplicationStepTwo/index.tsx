@@ -26,6 +26,7 @@ const MenteeApplicationStepTwo = (): ReactElement => {
           <InputField
             placeholder='Link to your work samples'
             errorMessage={errors['applicantPortfolio']?.message}
+            error={Boolean(errors['applicantPortfolio'])}
             {...field}
             ref={null}
           />
