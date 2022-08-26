@@ -29,6 +29,7 @@ const MenteeApplication = ({
   setCurrentStep,
 }: MenteeApplicationProps): ReactElement => {
   const methods = useForm({
+    mode: 'onChange',
     resolver: yupResolver(menteeApplicationSchema),
   });
 
@@ -43,13 +44,17 @@ const MenteeApplication = ({
       isValid = await methods.trigger(['program', 'hours', 'applicantInfo']);
     }
 
+    if (currentStep === 2) {
+      isValid = await methods.trigger(['applicantPortfolio', 'skills']);
+    }
+
     if (isValid) {
       setCurrentStep(currentStep + 1);
     }
   };
 
   const handleMenteeApplication: SubmitHandler<FieldValues> = (_data) => {
-    // console.log(data);
+    // console.log(_data);
     return;
   };
 
