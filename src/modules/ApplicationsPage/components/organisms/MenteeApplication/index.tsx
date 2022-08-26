@@ -6,6 +6,7 @@ import { ReactElement } from 'react';
 
 import {
   MenteeApplicationStepOne,
+  MenteeApplicationStepThree,
   MenteeApplicationStepTwo,
 } from '@/modules/ApplicationsPage/components/molecules/';
 
@@ -37,6 +38,7 @@ const MenteeApplication = ({
       <div className='mt-12 mb-10'>
         {currentStep === 1 && <MenteeApplicationStepOne />}
         {currentStep === 2 && <MenteeApplicationStepTwo />}
+        {currentStep === 3 && <MenteeApplicationStepThree />}
       </div>
       <div className='flex flex-col medium:flex-row medium:justify-between'>
         <Button
