@@ -59,7 +59,7 @@ const MenteeApplication = ({
           )}
           {currentStep < 3 && (
             <Button
-              className='order-1 flex items-center justify-center medium:order-2'
+              className='order-1 mb-2 flex items-center justify-center medium:order-2'
               onClick={nextButtonClickHandler}
             >
               Next
