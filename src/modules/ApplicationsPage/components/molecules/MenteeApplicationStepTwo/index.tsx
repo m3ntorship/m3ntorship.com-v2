@@ -2,13 +2,7 @@ import { InputField, Radio, Typography } from 'm3ntorship-ui';
 import { ReactElement } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
-const skills = [
-  { id: 'skills-1', label: '1', value: 'skills-1' },
-  { id: 'skills-2', label: '2', value: 'skills-2' },
-  { id: 'skills-3', label: '3', value: 'skills-3' },
-  { id: 'skills-4', label: '4', value: 'skills-4' },
-  { id: 'skills-5', label: '5', value: 'skills-5' },
-];
+import { skills } from '@/modules/ApplicationsPage/components/organisms/MenteeApplication/utils';
 
 const MenteeApplicationStepTwo = (): ReactElement => {
   const {

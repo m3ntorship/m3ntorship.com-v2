@@ -2,47 +2,10 @@ import { InputField, SelectInput, Typography } from 'm3ntorship-ui';
 import { ReactElement } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
-const occupationOptions = [
-  {
-    label: 'Student',
-    value: 'student',
-  },
-  {
-    label: 'Full Time',
-    value: 'full-time',
-  },
-  {
-    label: 'Unemployed',
-    value: 'unemployed',
-  },
-];
-
-const howDidYouHearQuestionOptions = [
-  {
-    label: 'From a Friend',
-    value: 'friend',
-  },
-  {
-    label: 'From Facebook',
-    value: 'facebook',
-  },
-  {
-    label: 'From Twitter',
-    value: 'twitter',
-  },
-  {
-    label: 'From Linkedin',
-    value: 'linkedin',
-  },
-  {
-    label: 'From Youtube',
-    value: 'youtube',
-  },
-  {
-    label: 'Other Option',
-    value: 'other',
-  },
-];
+import {
+  howDidYouHearQuestionOptions,
+  occupationOptions,
+} from '@/modules/ApplicationsPage/components/organisms/MenteeApplication/utils';
 
 const MenteeApplicationStepThree = (): ReactElement => {
   const {

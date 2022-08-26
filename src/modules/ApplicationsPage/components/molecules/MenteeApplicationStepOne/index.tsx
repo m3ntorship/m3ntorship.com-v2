@@ -2,17 +2,10 @@ import { InputField, Radio, Typography } from 'm3ntorship-ui';
 import { ReactElement } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
-const programs = [
-  { id: 'front-end-track', label: 'Front-end track', value: 'front-end' },
-  { id: 'back-end-track', label: 'Back-end track', value: 'back-end' },
-];
-
-const hours = [
-  { id: '20', label: '20', value: '20' },
-  { id: '25', label: '25', value: '25' },
-  { id: '30', label: '30', value: '30' },
-  { id: 'plus-30', label: '+30', value: 'plus-30' },
-];
+import {
+  hours,
+  programs,
+} from '@/modules/ApplicationsPage/components/organisms/MenteeApplication/utils';
 
 const MenteeApplicationStepOne = (): ReactElement => {
   const {
