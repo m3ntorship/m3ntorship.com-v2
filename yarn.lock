@@ -5401,10 +5401,10 @@ lz-string@^1.4.4:
   resolved "https://registry.yarnpkg.com/lz-string/-/lz-string-1.4.4.tgz#c0d8eaf36059f705796e1e344811cf4c498d3a26"
   integrity sha1-wNjq82BZ9wV5bh40SBHPTEmNOiY=
 
-m3ntorship-ui@^1.4.2:
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/m3ntorship-ui/-/m3ntorship-ui-1.4.2.tgz#a455328c1600216ca44475369677d862dea8dc88"
-  integrity sha512-j33DwN1yArFr+wGIaXUi9ZQpo5f4Wo7wJ0cYW1mnNCfd4PuIWSJDy6uPQt1FZtftWiejcpinknsYSao+qYcSog==
+m3ntorship-ui@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/m3ntorship-ui/-/m3ntorship-ui-1.4.3.tgz#4ae40b1efbb8e02bb5009ce451566e6c31fa11b2"
+  integrity sha512-437LoUHvrSIkKCz53RtSUpmLNvRB4tyNoUAOKXEh//cj2nP6lJ8/1/5tw1hk6s2xVHdgUQmt98xNv7qOfQVroQ==
   dependencies:
     classnames "^2.3.1"
     identity-obj-proxy "^3.0.0"
