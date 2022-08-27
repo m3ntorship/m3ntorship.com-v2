@@ -1,3 +1,4 @@
+import { yupResolver } from '@hookform/resolvers/yup';
 import {
   Button,
   Checkbox,
@@ -8,91 +9,236 @@ import {
 } from 'm3ntorship-ui';
 import Submit from 'public/images/applications-page/submit.svg';
 import { ReactElement } from 'react';
+import {
+  Controller,
+  FieldValues,
+  SubmitHandler,
+  useFieldArray,
+  useForm,
+} from 'react-hook-form';
 
-const currentOccupationOptions = [
-  {
-    label: 'Occupation 1',
-    value: 'occupation 1',
-  },
-];
+import {
+  hours,
+  mentorApplicationSchema,
+  mentorDomains,
+  occupationOptions,
+} from './utils';
 
 const MentorApplication = (): ReactElement => {
+  const {
+    handleSubmit,
+    control,
+    formState: { errors },
+    getValues,
+  } = useForm({
+    resolver: yupResolver(mentorApplicationSchema),
+    defaultValues: {
+      mentorDomains: mentorDomains,
+      hours: '',
+      mentorEmail: '',
+      mentorInfo: '',
+      mentorLinkedin: '',
+      mentorName: '',
+      occupation: '',
+    },
+  });
+  const { fields } = useFieldArray({
+    control,
+    name: 'mentorDomains',
+  });
+
+  const handleMentorApplication: SubmitHandler<FieldValues> = (_data) => {
+    // console.log(_data);
+    return;
+  };
+
   return (
-    <div className='mt-12 w-full'>
+    <form
+      className='mt-12 w-full'
+      onSubmit={handleSubmit(handleMentorApplication)}
+    >
       <div>
         <div className='mb-4'>
           <Typography variant='subtitle'>
             What are your expertise areas?
           </Typography>
         </div>
+
         <div className='inline-grid grid-flow-row gap-4'>
-          <Checkbox label='Front-End' value='front-end' />
-          <Checkbox label='Back-End' value='back-end' />
-          <Checkbox label='Android' value='android' />
-          <Checkbox label='IOS' value='ios' />
-          <Checkbox label='Product management' value='product-management' />
-          <Checkbox label='Other' value='other' />
+          {fields.map((domain, index) => (
+            <Controller
+              key={domain.id}
+              name={`mentorDomains.${index}.value`}
+              control={control}
+              render={({ field }) => (
+                <Checkbox
+                  {...field}
+                  id={domain.id}
+                  label={domain.label}
+                  value={domain.value}
+                  ref={null}
+                />
+              )}
+            />
+          ))}
         </div>
+
+        {errors['mentorDomains'] && (
+          <Typography variant='body1' className='mt-2 text-error'>
+            <>{errors['mentorDomains']?.message}</>
+          </Typography>
+        )}
+
         <div className='my-4'>
           <Typography variant='subtitle'>
             What is your current occupation? *
           </Typography>
         </div>
-        <SelectInput placeholder='choose' options={currentOccupationOptions} />
+
+        <Controller
+          name='occupation'
+          control={control}
+          render={({ field }) => (
+            <SelectInput
+              placeholder='choose'
+              options={occupationOptions}
+              errorMessage={errors['occupation']?.message}
+              error={Boolean(errors['occupation'])}
+              {...field}
+              ref={null}
+            />
+          )}
+        />
 
         <div className='my-4'>
           <Typography variant='subtitle'>
             How many hours per week can you dedicate to the program? *
           </Typography>
         </div>
+
         <div className='inline-grid grid-flow-row gap-4 medium:grid-flow-col medium:gap-8'>
-          <Radio label='20' id='20' name='hours' />
-          <Radio label='25' id='25' name='hours' />
-          <Radio label='30' id='30' name='hours' />
-          <Radio label='+30' id='plus-30' name='hours' />
+          {hours.map((hour) => (
+            <Controller
+              key={hour.id}
+              name='hours'
+              control={control}
+              render={({ field }) => (
+                <Radio
+                  {...field}
+                  label={hour.label}
+                  id={hour.id}
+                  value={hour.value}
+                  ref={null}
+                  checked={getValues('hours') === hour.value}
+                />
+              )}
+            />
+          ))}
         </div>
+
+        {errors['hours'] && (
+          <Typography variant='body1' className='mt-2 text-error'>
+            <>{errors['hours']?.message}</>
+          </Typography>
+        )}
 
         <div className='my-4'>
           <Typography variant='subtitle'>
             Please, tell us about your self and your motivation to apply *
           </Typography>
         </div>
-        <InputField multiline placeholder='Start typing' />
+
+        <Controller
+          name='mentorInfo'
+          control={control}
+          render={({ field }) => (
+            <InputField
+              multiline
+              errorMessage={errors['mentorInfo']?.message}
+              placeholder='Start typing'
+              {...field}
+              ref={null}
+            />
+          )}
+        />
 
         <div className='my-4'>
           <Typography variant='subtitle'>
             Please, enter your LinkedIn profile URL *
           </Typography>
         </div>
-        <InputField placeholder='Enter URL' />
+
+        <Controller
+          name='mentorLinkedin'
+          control={control}
+          render={({ field }) => (
+            <InputField
+              placeholder='Enter URL'
+              errorMessage={errors['mentorLinkedin']?.message}
+              error={Boolean(errors['mentorLinkedin'])}
+              {...field}
+              ref={null}
+            />
+          )}
+        />
 
         <div className='my-4'>
           <Typography variant='subtitle'>What is your name? *</Typography>
         </div>
-        <InputField placeholder='Enter name' />
+
+        <Controller
+          name='mentorName'
+          control={control}
+          render={({ field }) => (
+            <InputField
+              placeholder='Enter name'
+              {...field}
+              ref={null}
+              errorMessage={errors['mentorName']?.message}
+              error={Boolean(errors['mentorName'])}
+            />
+          )}
+        />
 
         <div className='my-4'>
           <Typography variant='subtitle'>
             What is your email address? *
           </Typography>
         </div>
-        <InputField placeholder='Enter email' />
+
+        <Controller
+          name='mentorEmail'
+          control={control}
+          render={({ field }) => (
+            <InputField
+              placeholder='Enter email'
+              {...field}
+              ref={null}
+              errorMessage={errors['mentorEmail']?.message}
+              error={Boolean(errors['mentorEmail'])}
+            />
+          )}
+        />
       </div>
 
       <div className='mt-10 flex flex-col medium:flex-row medium:justify-between'>
         <Button
           variant='text'
           color='neutral'
+          type='button'
           className='order-2 my-2 medium:order-1 medium:my-0'
         >
           Cancel
         </Button>
-        <Button className='order-1 flex items-center justify-center medium:order-2'>
+        <Button
+          type='submit'
+          className='order-1 flex items-center justify-center medium:order-2'
+        >
           Submit
           <Submit className='ml-2' />
         </Button>
       </div>
-    </div>
+    </form>
   );
 };
 
