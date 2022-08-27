@@ -49,10 +49,10 @@ export const Navbar = (): ReactElement => {
             </IconButton>
           </span>
           <NavItem href='/' text='Story' />
-          <NavItem href='/applications' text='Programs' />
+          <NavItem href='/' text='Programs' />
           <NavItem href='/' text='Alumni' />
           <NavItem href='/' text='Mentors' />
-          <NavItem href='/' text='Contacy' />
+          <NavItem href='/' text='Contact' />
           <div className='mx-med'>
             <NextLink href='/applications'>
               <Button variant='ghost'>Apply Now</Button>
