@@ -1,4 +1,5 @@
 import { Button, Typography } from 'm3ntorship-ui';
+import NextLink from 'next/link';
 import githubBg from 'public/images/home-page/github-bg.png';
 import type { ReactElement } from 'react';
 
@@ -20,7 +21,9 @@ export default function EnrollSection(): ReactElement {
       <Typography variant='h1' align='center' className={styles['enroll-text']}>
         Semper feugiat nibh sed pulvinar
       </Typography>
-      <Button size='lg'>Enroll for free</Button>
+      <NextLink href='/applications'>
+        <Button size='lg'>Enroll for free</Button>
+      </NextLink>
     </section>
   );
 }

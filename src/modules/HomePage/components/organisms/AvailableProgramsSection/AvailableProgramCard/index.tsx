@@ -1,5 +1,6 @@
 import { Button, Typography } from 'm3ntorship-ui';
 import Image from 'next/image';
+import NextLink from 'next/link';
 import { ReactElement } from 'react';
 
 import ProgramCard from '@/modules/HomePage/components/molecules/ProgramCard';
@@ -31,9 +32,9 @@ export default function AvailableProgramCard(
         </Typography>
       }
       button={
-        <Button variant='filled' size='md'>
-          {props.buttonLabel}
-        </Button>
+        <NextLink href='/applications'>
+          <Button size='md'>{props.buttonLabel}</Button>
+        </NextLink>
       }
       image={
         <div className='flex h-full w-full items-center justify-center bg-background small:py-med'>

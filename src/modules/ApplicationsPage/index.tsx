@@ -30,10 +30,10 @@ export default function ApplicationsPage(): ReactElement {
   };
 
   return (
-    <div className='flex flex-col items-center justify-center '>
+    <div className='flex flex-col items-center justify-center'>
       <ApplicationsHeader />
 
-      <div className='mt-16 w-full p-14 large:w-xxxxxl'>
+      <div className='my-16 w-full rounded-lrg bg-white p-14 shadow-shd-1 large:w-xxxxxl'>
         {currentStep === 1 && (
           <>
             <Typography variant='h4'>

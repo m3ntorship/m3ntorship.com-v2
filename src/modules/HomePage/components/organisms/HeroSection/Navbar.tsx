@@ -1,4 +1,5 @@
 import { Button, IconButton, Link, Typography } from 'm3ntorship-ui';
+import NextLink from 'next/link';
 import type { ReactElement } from 'react';
 import React, { useState } from 'react';
 
@@ -47,13 +48,15 @@ export const Navbar = (): ReactElement => {
               <X />
             </IconButton>
           </span>
-          <NavItem href='/story' text='Story' />
-          <NavItem href='/programs' text='Programs' />
-          <NavItem href='/alumni' text='Alumni' />
-          <NavItem href='/mentors' text='Mentors' />
-          <NavItem href='/contacy' text='Contacy' />
+          <NavItem href='/' text='Story' />
+          <NavItem href='/' text='Programs' />
+          <NavItem href='/' text='Alumni' />
+          <NavItem href='/' text='Mentors' />
+          <NavItem href='/' text='Contact' />
           <div className='mx-med'>
-            <Button variant='ghost'>Apply Now</Button>
+            <NextLink href='/applications'>
+              <Button variant='ghost'>Apply Now</Button>
+            </NextLink>
           </div>
         </ul>
       </div>
@@ -69,11 +72,13 @@ interface NavProps {
 const NavItem = ({ href, text }: NavProps): ReactElement => {
   return (
     <li className={style.linksListItem}>
-      <Link href={href}>
-        <Typography align='center' variant='body1'>
-          {text}
-        </Typography>
-      </Link>
+      <NextLink href={href}>
+        <Link>
+          <Typography align='center' variant='body1'>
+            {text}
+          </Typography>
+        </Link>
+      </NextLink>
     </li>
   );
 };

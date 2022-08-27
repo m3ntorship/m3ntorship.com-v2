@@ -1,4 +1,5 @@
 import { Button, Typography } from 'm3ntorship-ui';
+import NextLink from 'next/link';
 import type { ReactElement } from 'react';
 import React from 'react';
 
@@ -28,17 +29,11 @@ export default function HeroSection(): ReactElement {
             amet commodo nulla facilisi nullam vehicula ipsum a arc
           </Typography>
           <div className='button my-8'>
-            <Button
-              color='primary'
-              className='w-full medium:w-auto'
-              onClick={() => {
-                alert('Hello');
-              }}
-              size='lg'
-              variant='filled'
-            >
-              Enroll for free
-            </Button>
+            <NextLink href='/applications'>
+              <Button className='w-full medium:w-auto' size='lg'>
+                Enroll for free
+              </Button>
+            </NextLink>
           </div>
         </div>
         <div className={style.heroSectionImageParentContainer}>
