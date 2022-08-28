@@ -3,7 +3,7 @@ import { Button, Progress, Typography } from 'm3ntorship-ui';
 import ArrowLeft from 'public/images/applications-page/arrow-left.svg';
 import ArrowRight from 'public/images/applications-page/arrow-right.svg';
 import Submit from 'public/images/applications-page/submit.svg';
-import { ReactElement } from 'react';
+import { Dispatch, ReactElement, SetStateAction } from 'react';
 import {
   FieldValues,
   FormProvider,
@@ -22,11 +22,13 @@ import { menteeApplicationSchema } from './utils';
 interface MenteeApplicationProps {
   currentStep: number;
   setCurrentStep(newStep: number): void;
+  setShowSuccess: Dispatch<SetStateAction<boolean>>;
 }
 
 const MenteeApplication = ({
   currentStep,
   setCurrentStep,
+  setShowSuccess,
 }: MenteeApplicationProps): ReactElement => {
   const methods = useForm({
     mode: 'onChange',
@@ -53,9 +55,10 @@ const MenteeApplication = ({
     }
   };
 
-  const handleMenteeApplication: SubmitHandler<FieldValues> = (_data) => {
-    // console.log(_data);
-    return;
+  const handleMenteeApplication: SubmitHandler<FieldValues> = (data) => {
+    setShowSuccess(true);
+    // eslint-disable-next-line no-console
+    console.log(data);
   };
 
   return (

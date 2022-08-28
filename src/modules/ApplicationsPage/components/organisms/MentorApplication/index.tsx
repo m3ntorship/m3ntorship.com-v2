@@ -8,7 +8,7 @@ import {
   Typography,
 } from 'm3ntorship-ui';
 import Submit from 'public/images/applications-page/submit.svg';
-import { ReactElement } from 'react';
+import { Dispatch, ReactElement, SetStateAction } from 'react';
 import {
   Controller,
   FieldValues,
@@ -24,7 +24,13 @@ import {
   occupationOptions,
 } from './utils';
 
-const MentorApplication = (): ReactElement => {
+interface MentorApplicationProps {
+  setShowSuccess: Dispatch<SetStateAction<boolean>>;
+}
+
+const MentorApplication = ({
+  setShowSuccess,
+}: MentorApplicationProps): ReactElement => {
   const {
     handleSubmit,
     control,
@@ -47,9 +53,10 @@ const MentorApplication = (): ReactElement => {
     name: 'mentorDomains',
   });
 
-  const handleMentorApplication: SubmitHandler<FieldValues> = (_data) => {
-    // console.log(_data);
-    return;
+  const handleMentorApplication: SubmitHandler<FieldValues> = (data) => {
+    setShowSuccess(true);
+    // eslint-disable-next-line no-console
+    console.log(data);
   };
 
   return (
