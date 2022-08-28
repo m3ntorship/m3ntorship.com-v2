@@ -49,7 +49,7 @@ export default function ApplicationsPage(): ReactElement {
               >
                 <div className='flex items-center justify-center'>
                   <Mentee className='mr-4 hidden h-14 w-16 medium:block' />
-                  <span className='sm:ml-4 whitespace-nowrap font-inter leading-24 tracking-wide'>
+                  <span className='sm:ml-4 font-inter leading-24 tracking-wide'>
                     {!matched && 'Apply as a'} mentee
                   </span>
                 </div>
@@ -61,7 +61,7 @@ export default function ApplicationsPage(): ReactElement {
                 >
                   <div className='flex items-center justify-center'>
                     <Mentor className='mr-4 hidden h-14 w-16 medium:block' />
-                    <span className='sm:ml-4 whitespace-nowrap font-inter leading-24 tracking-wide'>
+                    <span className='sm:ml-4 font-inter leading-24 tracking-wide'>
                       {!matched && 'Apply as a'} mentor
                     </span>
                   </div>
