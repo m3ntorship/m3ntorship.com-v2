@@ -11,10 +11,13 @@ const ApplicationsTab = ({
   active,
   ...props
 }: ApplicaitonsTabProps): ReactElement => {
-  const buttonClasses = clsx('flex items-center justify-center px-14 py-4', {
-    'border-thick border-success rounded-lrg': active,
-    'border-thick border-transparent': !active,
-  });
+  const buttonClasses = clsx(
+    'flex items-center justify-center py-4 rounded-lrg w-full',
+    {
+      'border-thick border-success rounded-lrg': active,
+      'border-thick border-transparent bg-background': !active,
+    }
+  );
 
   return (
     <button className={buttonClasses} {...props}>
