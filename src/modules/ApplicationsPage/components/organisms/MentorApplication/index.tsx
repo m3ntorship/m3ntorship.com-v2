@@ -17,6 +17,9 @@ import {
   useForm,
 } from 'react-hook-form';
 
+import { SCREENS } from '@/shared/constants';
+import useMedia from '@/shared/hooks/windowSize';
+
 import {
   hours,
   mentorApplicationSchema,
@@ -31,6 +34,8 @@ interface MentorApplicationProps {
 const MentorApplication = ({
   setShowSuccess,
 }: MentorApplicationProps): ReactElement => {
+  const matched = useMedia(`(max-width: ${SCREENS.MD}px)`);
+
   const {
     handleSubmit,
     control,
@@ -230,6 +235,7 @@ const MentorApplication = ({
 
       <div className='mt-10 flex flex-col medium:flex-row medium:justify-between'>
         <Button
+          size={matched ? 'lg' : 'md'}
           variant='text'
           color='neutral'
           type='button'
@@ -238,6 +244,7 @@ const MentorApplication = ({
           Cancel
         </Button>
         <Button
+          size={matched ? 'lg' : 'md'}
           type='submit'
           className='order-1 flex items-center justify-center medium:order-2'
         >
