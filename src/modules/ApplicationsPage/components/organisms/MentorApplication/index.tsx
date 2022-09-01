@@ -234,17 +234,19 @@ const MentorApplication = ({
         />
       </div>
 
-      <div className='mt-10 flex flex-col medium:flex-row medium:justify-between'>
+      <div className='mt-10 flex flex-col gap-2 medium:flex-row medium:justify-between'>
         <Link href='/'>
-          <Button
-            size={matched ? 'lg' : 'md'}
-            variant='text'
-            color='neutral'
-            type='button'
-            className='order-2 my-2 medium:order-1 medium:my-0'
-          >
-            Cancel
-          </Button>
+          <a className='order-2 medium:order-1'>
+            <Button
+              size={matched ? 'lg' : 'md'}
+              variant='text'
+              color='neutral'
+              type='button'
+              className='w-full'
+            >
+              Cancel
+            </Button>
+          </a>
         </Link>
 
         <Button

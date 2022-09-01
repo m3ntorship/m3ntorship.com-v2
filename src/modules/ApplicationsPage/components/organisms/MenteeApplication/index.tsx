@@ -84,24 +84,26 @@ const MenteeApplication = ({
           {currentStep === 2 && <MenteeApplicationStepTwo />}
           {currentStep === 3 && <MenteeApplicationStepThree />}
         </div>
-        <div className='flex flex-col medium:flex-row medium:justify-between'>
+        <div className='flex flex-col gap-2 medium:flex-row medium:justify-between'>
           <Link href='/'>
-            <Button
-              size={matched ? 'lg' : 'md'}
-              variant='text'
-              color='neutral'
-              className='order-2 medium:order-1'
-            >
-              Cancel
-            </Button>
+            <a className='order-2 medium:order-1'>
+              <Button
+                size={matched ? 'lg' : 'md'}
+                variant='text'
+                color='neutral'
+                className='w-full'
+              >
+                Cancel
+              </Button>
+            </a>
           </Link>
 
-          <div className='order-1 flex flex-col medium:order-2 medium:flex-row'>
+          <div className='order-1 flex flex-col gap-2 medium:order-2 medium:flex-row'>
             {currentStep > 1 && (
               <Button
                 size={matched ? 'lg' : 'md'}
                 type='button'
-                className='order-2 my-2 flex items-center  justify-center medium:order-1 medium:my-0 medium:mr-2'
+                className='order-2 flex items-center justify-center medium:order-1'
                 variant='text'
                 onClick={previousButtonClickHandler}
               >
@@ -113,7 +115,7 @@ const MenteeApplication = ({
               <Button
                 size={matched ? 'lg' : 'md'}
                 type='button'
-                className='order-1 mb-2 flex items-center justify-center medium:order-2'
+                className='order-1 flex items-center justify-center medium:order-2'
                 onClick={nextButtonClickHandler}
               >
                 Next
