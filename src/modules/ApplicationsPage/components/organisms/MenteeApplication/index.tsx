@@ -1,5 +1,6 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Button, Progress, Typography } from 'm3ntorship-ui';
+import Link from 'next/link';
 import ArrowLeft from 'public/images/applications-page/arrow-left.svg';
 import ArrowRight from 'public/images/applications-page/arrow-right.svg';
 import Submit from 'public/images/applications-page/submit.svg';
@@ -84,14 +85,17 @@ const MenteeApplication = ({
           {currentStep === 3 && <MenteeApplicationStepThree />}
         </div>
         <div className='flex flex-col medium:flex-row medium:justify-between'>
-          <Button
-            size={matched ? 'lg' : 'md'}
-            variant='text'
-            color='neutral'
-            className='order-2 medium:order-1'
-          >
-            Cancel
-          </Button>
+          <Link href='/'>
+            <Button
+              size={matched ? 'lg' : 'md'}
+              variant='text'
+              color='neutral'
+              className='order-2 medium:order-1'
+            >
+              Cancel
+            </Button>
+          </Link>
+
           <div className='order-1 flex flex-col medium:order-2 medium:flex-row'>
             {currentStep > 1 && (
               <Button
