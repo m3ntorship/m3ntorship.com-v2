@@ -7,6 +7,7 @@ import {
   SelectInput,
   Typography,
 } from 'm3ntorship-ui';
+import Link from 'next/link';
 import Submit from 'public/images/applications-page/submit.svg';
 import { Dispatch, ReactElement, SetStateAction } from 'react';
 import {
@@ -233,16 +234,21 @@ const MentorApplication = ({
         />
       </div>
 
-      <div className='mt-10 flex flex-col medium:flex-row medium:justify-between'>
-        <Button
-          size={matched ? 'lg' : 'md'}
-          variant='text'
-          color='neutral'
-          type='button'
-          className='order-2 my-2 medium:order-1 medium:my-0'
-        >
-          Cancel
-        </Button>
+      <div className='mt-10 flex flex-col gap-2 medium:flex-row medium:justify-between'>
+        <Link href='/'>
+          <a className='order-2 medium:order-1'>
+            <Button
+              size={matched ? 'lg' : 'md'}
+              variant='text'
+              color='neutral'
+              type='button'
+              className='w-full'
+            >
+              Cancel
+            </Button>
+          </a>
+        </Link>
+
         <Button
           size={matched ? 'lg' : 'md'}
           type='submit'
