@@ -11,42 +11,9 @@
   @apply absolute right-0 z-0 h-full w-5/12 rounded-br-lrg rounded-bl-lrg bg-white shadow-shd-1;
 }
 
-/******************** NavBar classes ********************/
-.navBar {
-  @apply relative flex flex-row justify-between bg-transparent py-xl;
-}
-
-.logoParentDiv {
-  @apply flex items-center;
-}
-
-.logo {
-  @apply ml-4 h-lrg w-49.5 medium:ml-8 large:mx-6;
-}
-
-.menuIcon {
-  @apply z-50 mr-4 large:hidden;
-}
-
-.navLinks {
-  @apply absolute left-0 top-0 z-50 h-screen w-full transform bg-white transition-all large:static large:z-0 large:h-auto large:w-auto large:transform-none large:bg-transparent;
-}
-
-.linksList {
-  @apply flex flex-col items-center large:flex-row;
-}
-
-.closeIcon {
-  @apply z-50 mr-4 flex w-full justify-end pt-8 large:hidden;
-}
-
-.linksListItem {
-  @apply my-3 mx-med cursor-pointer large:my-auto;
-}
-
 /******************** content section classes ********************/
 .heroSectionContent {
-  @apply relative z-10 flex pt-6 pb-17.5;
+  @apply relative z-10 flex pt-32 pb-17.5;
 }
 
 .heroSectionContentInfo {
