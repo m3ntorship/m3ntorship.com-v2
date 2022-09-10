@@ -1,0 +1,27 @@
+.navWrapper {
+  @apply absolute top-0 z-20 w-full bg-transparent py-xl px-10 large:px-6;
+}
+
+.navContent {
+  @apply m-auto flex max-w-[1216px] justify-between;
+}
+
+.logoParentDiv {
+  @apply flex items-center;
+}
+
+.logo {
+  @apply h-lrg w-49.5 large:mx-6;
+}
+
+.linksList {
+  @apply flex items-center;
+}
+
+.linksListItem {
+  @apply my-3 mx-med cursor-pointer large:my-auto;
+}
+
+.navMobile {
+  @apply flex h-screen w-64 flex-col items-center justify-between bg-white p-4 transition-transform duration-300 ease-in;
+}
