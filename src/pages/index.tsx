@@ -23,7 +23,7 @@ export default function Home(): ReactElement {
   };
 
   return (
-    <DefaultLayout withFooter seoData={seoData}>
+    <DefaultLayout withNavbar withFooter seoData={seoData}>
       <HomePage />
     </DefaultLayout>
   );

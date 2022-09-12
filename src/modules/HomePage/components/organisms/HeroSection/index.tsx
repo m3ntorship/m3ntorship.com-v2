@@ -8,7 +8,6 @@ import style from './hero.module.css';
 import WindowMatchMedia from '@/shared/hooks/windowSize';
 
 import Casual from './assets/casual.svg';
-import { Navbar } from './Navbar';
 
 export default function HeroSection(): ReactElement {
   const mobile: boolean = WindowMatchMedia('(max-width: 600px)');
@@ -16,9 +15,6 @@ export default function HeroSection(): ReactElement {
     <section className={style.customContainer}>
       <span className={style.backgroundShapeOne}></span>
       <span className={style.backgroundShapeTwo}></span>
-      <div>
-        <Navbar />
-      </div>
       <div className={style.heroSectionContent}>
         <div className={style.heroSectionContentInfo}>
           <Typography align='left' variant={mobile ? 'h2' : 'hero'}>
