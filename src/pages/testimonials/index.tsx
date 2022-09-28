@@ -6,7 +6,7 @@ import { DefaultLayout } from '@/shared/hocs';
 export default function Testimonials(): ReactElement {
   const seoData = {
     templateTitle: 'Testimonials',
-    image: '/images/testimonials-page/hero-bg.png',
+    image: '/images/testimonials-page/mentees.png',
   };
 
   return (
