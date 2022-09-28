@@ -45,7 +45,7 @@ export default function Navbar(): ReactElement {
           <ul className={style.linksList}>
             <NavItem href='/' text='Story' />
             <NavItem href='/' text='Programs' />
-            <NavItem href='/' text='Alumni' />
+            <NavItem href='/testimonials' text='Alumni' />
             <NavItem href='/' text='Mentors' />
             <NavItem href='/' text='Contact' />
             <div className='mx-med'>
@@ -97,7 +97,7 @@ function NavbarMobile({ setShowModal }: NavbarMobileProps): ReactElement {
 
           <NavItem href='/' text='Story' />
           <NavItem href='/' text='Programs' />
-          <NavItem href='/' text='Alumni' />
+          <NavItem href='/testimonials' text='Alumni' />
           <NavItem href='/' text='Mentors' />
           <NavItem href='/' text='Contact' />
         </ul>
