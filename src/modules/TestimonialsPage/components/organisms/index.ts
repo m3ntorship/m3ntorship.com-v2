@@ -1,2 +1,2 @@
-export { default as HeroSection } from './HeroSection';
+export { default as TestimonialsHero } from './TestimonialsHero';
 export { EnrollSection } from '@/shared/components/molecules';

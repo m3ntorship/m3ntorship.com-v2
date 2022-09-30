@@ -1,7 +1,0 @@
-.hero-wrapper {
-  @apply relative flex h-87.5 flex-col items-center justify-center gap-2 overflow-hidden rounded-lrg px-2 medium:bg-black;
-}
-
-.overlay {
-  @apply absolute h-full w-full bg-misc-overlay;
-}

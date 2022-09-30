@@ -2,14 +2,14 @@ import { Typography } from 'm3ntorship-ui';
 import menteesBg from 'public/images/testimonials-page/mentees.png';
 import { ReactElement } from 'react';
 
-import styles from './HeroSection.module.css';
+import styles from './TestimonialsHero.module.css';
 
 import { NextImage } from '@/shared/components/atoms';
 import { SCREENS } from '@/shared/constants';
-import useMedia from '@/shared/hooks/windowSize';
+import windowMatchMedia from '@/shared/hooks/windowSize';
 
-export default function HeroSection(): ReactElement {
-  const isMDScreen = useMedia(`(min-width: ${SCREENS.MD}px)`);
+export default function TestimonialsHero(): ReactElement {
+  const isMDScreen = windowMatchMedia(`(min-width: ${SCREENS.MD}px)`);
 
   return (
     <section className={styles['hero-wrapper']}>
@@ -27,7 +27,7 @@ export default function HeroSection(): ReactElement {
       )}
 
       <Typography
-        variant='h1'
+        variant={isMDScreen ? 'h1' : 'h2'}
         align='center'
         className='z-10 text-black medium:text-white'
       >

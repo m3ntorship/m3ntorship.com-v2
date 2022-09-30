@@ -2,14 +2,14 @@ import type { ReactElement } from 'react';
 
 import {
   EnrollSection,
-  HeroSection,
+  TestimonialsHero,
 } from '@/modules/TestimonialsPage/components/organisms';
 
 export default function HomePage(): ReactElement {
   return (
     <>
-      <div className='h-24' />
-      <HeroSection />
+      <div className='h-14' />
+      <TestimonialsHero />
       <EnrollSection />
     </>
   );
