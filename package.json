@@ -18,7 +18,9 @@
     "release": "standard-version",
     "push-release": "git push --follow-tags origin main",
     "postbuild": "next-sitemap",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.9.7",
@@ -27,6 +29,7 @@
     "cross-env": "^7.0.3",
     "m3ntorship-ui": "^1.6.0",
     "next": "^12.1.6",
+    "postcss-loader": "^7.0.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-hook-form": "^7.34.2",
@@ -36,8 +39,17 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
+    "@babel/core": "^7.19.3",
     "@commitlint/cli": "^16.3.0",
     "@commitlint/config-conventional": "^16.2.4",
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-interactions": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/builder-webpack5": "^6.5.12",
+    "@storybook/manager-webpack5": "^6.5.12",
+    "@storybook/react": "^6.5.12",
+    "@storybook/testing-library": "^0.0.13",
     "@svgr/webpack": "^6.2.1",
     "@tailwindcss/forms": "^0.5.2",
     "@testing-library/jest-dom": "^5.16.4",
@@ -48,6 +60,7 @@
     "@typescript-eslint/eslint-plugin": "^5.25.0",
     "@typescript-eslint/parser": "^5.25.0",
     "autoprefixer": "^10.4.7",
+    "babel-loader": "^8.2.5",
     "eslint": "^8.16.0",
     "eslint-config-next": "^12.1.6",
     "eslint-config-prettier": "^8.5.0",
