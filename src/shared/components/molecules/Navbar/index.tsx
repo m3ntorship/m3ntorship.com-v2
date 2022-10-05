@@ -43,11 +43,11 @@ export default function Navbar(): ReactElement {
 
         {!matchedLgScreen && (
           <ul className={style.linksList}>
-            <NavItem href='/' text='Story' />
+            <NavItem href='/story' text='Story' />
             <NavItem href='/' text='Programs' />
             <NavItem href='/testimonials' text='Alumni' />
             <NavItem href='/' text='Mentors' />
-            <NavItem href='/' text='Contact' />
+            <NavItem href='/contact' text='Contact' />
             <div className='mx-med'>
               <NextLink href='/applications'>
                 <Button variant='ghost'>Apply Now</Button>
@@ -95,11 +95,11 @@ function NavbarMobile({ setShowModal }: NavbarMobileProps): ReactElement {
             <X />
           </IconButton>
 
-          <NavItem href='/' text='Story' />
+          <NavItem href='/story' text='Story' />
           <NavItem href='/' text='Programs' />
           <NavItem href='/testimonials' text='Alumni' />
           <NavItem href='/' text='Mentors' />
-          <NavItem href='/' text='Contact' />
+          <NavItem href='/contact' text='Contact' />
         </ul>
         <NextLink href='/applications'>
           <Button className='w-full medium:w-auto' size='lg'>
