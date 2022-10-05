@@ -23,12 +23,12 @@ const socialMedias = [
 
 const links = {
   about: [
-    { id: '1', name: 'Story', route: '/' },
+    { id: '1', name: 'Story', route: '/story' },
     { id: '2', name: 'Programs', route: '/' },
-    { id: '3', name: 'Alumni', route: '/' },
+    { id: '3', name: 'Alumni', route: '/testimonials' },
     { id: '4', name: 'Mentors', route: '/' },
     { id: '5', name: 'Sponsors', route: '/' },
-    { id: '6', name: 'Contact', route: '/' },
+    { id: '6', name: 'Contact', route: '/contact' },
   ],
   conditions: [
     { id: '1', name: 'Terms of use', route: '/' },
