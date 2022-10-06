@@ -2,7 +2,7 @@ import { Button } from 'm3ntorship-ui';
 import { ReactElement, useState } from 'react';
 
 import { getFeedbacks } from '@/modules/TestimonialsPage/api';
-import { TestimonialCard } from '@/modules/TestimonialsPage/components/organisms';
+import { TestimonialCard } from '@/modules/TestimonialsPage/components/molecules';
 import { IFeedback } from '@/modules/TestimonialsPage/components/types/IFeedback';
 
 type FeedbackSectionProps = {
