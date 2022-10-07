@@ -125,6 +125,9 @@ module.exports = {
       height: {
         87.5: '21.875rem', // 350px
       },
+      width: {
+        73.5: '18.375rem', // 294px
+      },
       maxWidth: {
         '17ch': '17ch',
         50: '12.5rem', // 200px
