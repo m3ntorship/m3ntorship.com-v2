@@ -105,6 +105,8 @@ module.exports = {
       spacing: {
         ...oneLayerWithPixelAdding('spacing'),
         0: '0rem', // 0px
+        2.5: '0.625rem', // 10px
+        6.25: '1.5625rem', // 25px
         7: '1.75rem', // 28px
         12: '3rem', // 48px
         17.5: '4.375rem', // 70px
@@ -113,6 +115,7 @@ module.exports = {
         26: '6.5rem', // 104px
         26.5: '6.625rem', // 106px
         27.5: '6.875rem', // 110px
+        38: '9.5rem', // 152px
         40.25: '10.0625rem', // 161px
         49.5: '12.375rem', // 198px
         50: '12.5rem', // 200px
