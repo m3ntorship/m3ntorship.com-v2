@@ -16,7 +16,7 @@ export default function ContactSection(): ReactElement {
       />
       <div className='absolute h-full w-full bg-secondary/[0.72]' />
 
-      <div className='z-10 px-1 pt-16 pb-38 large:px-16 large:pb-12'>
+      <div className='z-10 px-1 py-16 medium:pt-16 medium:pb-38 large:px-16 large:pb-12'>
         <ContactLinks />
       </div>
     </section>
