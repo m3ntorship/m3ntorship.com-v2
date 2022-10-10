@@ -38,10 +38,12 @@
   "devDependencies": {
     "@commitlint/cli": "^16.3.0",
     "@commitlint/config-conventional": "^16.2.4",
+    "@faker-js/faker": "^7.5.0",
     "@svgr/webpack": "^6.2.1",
     "@tailwindcss/forms": "^0.5.2",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
+    "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^27.5.1",
     "@types/react": "^18.0.9",
     "@types/tailwindcss": "^3.0.10",
