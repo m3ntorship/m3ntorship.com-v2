@@ -4,6 +4,7 @@ import React from 'react';
 import TestimonialCard from '.';
 
 const cardInfo = {
+  id: '1',
   menteeInfo: {
     src: 'www.placeholder.com',
     name: 'ahmed',
