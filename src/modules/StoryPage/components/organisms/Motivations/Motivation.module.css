@@ -1,0 +1,19 @@
+.motivation-wrapper {
+  @apply grid medium:grid-cols-5 medium:grid-rows-2 large:grid-rows-1;
+}
+
+.image-wrapper {
+  @apply relative col-span-5 row-span-1 h-73 overflow-hidden rounded-tl-lrg rounded-tr-lrg medium:h-auto large:col-span-2 large:rounded-tr-[0px] large:rounded-bl-lrg;
+}
+
+.overlay {
+  @apply absolute top-0 left-0 h-full w-full bg-primary/[.72];
+}
+
+.hero-title {
+  @apply absolute top-1/2 right-1/2 z-10 w-full translate-x-1/2 -translate-y-1/2 text-white large:w-73.5;
+}
+
+.history-wrapper {
+  @apply col-span-5 flex flex-col items-start gap-4 rounded-bl-lrg rounded-br-lrg bg-white p-12 shadow-shd-1 large:col-span-3 large:rounded-tr-lrg large:rounded-bl-[0px];
+}
