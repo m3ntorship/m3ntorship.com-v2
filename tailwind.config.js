@@ -123,6 +123,7 @@ module.exports = {
         106: '26.5rem', // 424px
       },
       height: {
+        73: '18.25rem', // 292px
         87.5: '21.875rem', // 350px
       },
       width: {
