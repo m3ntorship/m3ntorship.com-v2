@@ -7,7 +7,16 @@ module.exports = {
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-interactions"
+    "@storybook/addon-interactions",
+    "storybook-css-modules-preset",
+    {
+      name: '@storybook/addon-postcss',
+      options: {
+        postcssLoaderOptions: {
+          implementation: require('postcss'),
+        },
+      },
+    },
   ],
   framework: '@storybook/react',
   core: {
@@ -15,10 +24,6 @@ module.exports = {
   },
   staticDirs: ['../public'],
   webpackFinal: async (config) => {
-    config.module.rules.push({
-      test: /\.css$/,
-      use: ['postcss-loader'],
-    });
     config.resolve.alias = {
       ...config.resolve.alias,
       '@': path.resolve(__dirname, '..', 'src'),
