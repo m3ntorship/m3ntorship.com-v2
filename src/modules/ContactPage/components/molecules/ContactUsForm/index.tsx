@@ -90,7 +90,7 @@ const ContactUsForm = (): ReactElement => {
                       error={Boolean(errors['name'])}
                       className='my_input'
                       id='name'
-                      label='name'
+                      label='Name'
                       placeholder='Enter your name'
                       {...field}
                     />
@@ -110,7 +110,7 @@ const ContactUsForm = (): ReactElement => {
                     errorMessage={errors['email']?.message}
                     error={Boolean(errors['email'])}
                     id='email'
-                    label='email'
+                    label='Email'
                     placeholder='Enter your email address'
                     {...field}
                   />
@@ -128,7 +128,7 @@ const ContactUsForm = (): ReactElement => {
                     id='textarea'
                     errorMessage={errors['message']?.message}
                     error={Boolean(errors['message'])}
-                    label='message'
+                    label='Message'
                     multiline
                     placeholder='Start typing'
                     {...field}
