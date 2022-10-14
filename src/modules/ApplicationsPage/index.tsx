@@ -7,11 +7,11 @@ import {
   ApplicationsHeader,
   ApplicationsTab,
 } from '@/modules/ApplicationsPage/components/molecules/';
-import ApplicationSuccess from '@/modules/ApplicationsPage/components/molecules/ApplicationSuccess';
 import {
   MenteeApplication,
   MentorApplication,
 } from '@/modules/ApplicationsPage/components/organisms/';
+import { ApplicationSuccess } from '@/shared/components/molecules';
 import { SCREENS } from '@/shared/constants';
 import useMedia from '@/shared/hooks/windowSize';
 
@@ -40,7 +40,12 @@ export default function ApplicationsPage(): ReactElement {
 
       <div className='my-16 w-full rounded-lrg bg-white medium:p-14 medium:shadow-shd-1 large:w-xxxxxl'>
         {showSuccess ? (
-          <ApplicationSuccess />
+          <ApplicationSuccess
+            messageContent='Your application has been successfully received. Our team will review it and will get back to you within 10 working days'
+            messageTitle='Application sent!'
+            showHomePageButton={false}
+            messageIconSize='md'
+          />
         ) : (
           <>
             {currentStep === 1 && (
