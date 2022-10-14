@@ -25,8 +25,7 @@ const ContactUsForm = (): ReactElement => {
     reset,
     control,
     formState,
-    formState: { errors },
-    formState: { isSubmitSuccessful },
+    formState: { errors, isSubmitSuccessful },
   } = useForm<IFormFields>({
     mode: 'onChange',
     resolver: yupResolver(schema),
