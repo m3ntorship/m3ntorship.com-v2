@@ -24,7 +24,7 @@ export default function Envision(): ReactElement {
   const isLGScreen = useWindowSize(`(min-width: ${SCREENS.LG}px)`);
 
   return (
-    <section className='flex flex-col gap-x-8 gap-y-12 large:flex-row'>
+    <section className='flex flex-col gap-x-24 gap-y-12 large:flex-row'>
       <div className='flex flex-col items-center gap-12'>
         <Typography
           variant={isMDScreen ? 'h1' : 'h3'}
@@ -55,7 +55,7 @@ export default function Envision(): ReactElement {
 
 function Pillar({ pillar }: { pillar: typeof singlePillar }): ReactElement {
   return (
-    <li>
+    <li className='flex flex-col gap-4'>
       <div className='flex items-center gap-2'>
         <NextImage
           alt={`pillar ${pillar.id}`}
