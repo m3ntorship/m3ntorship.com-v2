@@ -31,9 +31,10 @@ const ContactUsForm = (): ReactElement => {
     resolver: yupResolver(schema),
   });
   const [dataSubmitted, setSubmittedData] = useState(false);
-  const onSubmit = (data: IFormFields, e: React.MouseEvent) => {
-    setSubmitedData(true);
-    e.preventDefault();
+  const onSubmit = (data: IFormFields) => {
+    setSubmittedData(true);
+    // eslint-disable-next-line no-console
+    console.log(data);
   };
   useEffect(() => {
     if (isSubmitSuccessful) {
@@ -52,7 +53,7 @@ const ContactUsForm = (): ReactElement => {
       onSubmit={handleSubmit(onSubmit as SubmitHandler<IFormFields>)}
       className='flex border-spacing-2 flex-col gap-y-6 rounded-lrg bg-white p-10 shadow-shd-1'
     >
-      {dataSubmited ? (
+      {dataSubmitted ? (
         <ApplicationSuccess />
       ) : (
         <>
@@ -144,7 +145,11 @@ const ContactUsForm = (): ReactElement => {
             />
           </div>
           <div className='inline-flex justify-end'>
-            <Button type='submit' className='inline-block w-full medium:w-auto' size='lg'>
+            <Button
+              type='submit'
+              className='inline-block w-full medium:w-auto'
+              size='lg'
+            >
               Send
             </Button>
           </div>
