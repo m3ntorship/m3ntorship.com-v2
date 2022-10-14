@@ -8,10 +8,10 @@ describe('Contact us from', () => {
   it('renders fields (subject,name,email,message)', () => {
     const { getByRole } = render(<ContactUsForm />);
     const inputsSelect = getByRole('combobox', { name: 'select_subject' });
-    const nameInput = getByRole('textbox', { name: 'name' });
+    const nameInput = getByRole('textbox', { name: 'Name' });
     const sendButton = getByRole('button', { name: /send/i });
-    const emailInput = getByRole('textbox', { name: 'email' });
-    const messageInput = getByRole('textbox', { name: 'message' });
+    const emailInput = getByRole('textbox', { name: 'Email' });
+    const messageInput = getByRole('textbox', { name: 'Message' });
     expect(nameInput).toBeInTheDocument();
     expect(sendButton).toBeInTheDocument();
     expect(messageInput).toBeInTheDocument();
@@ -27,9 +27,9 @@ describe('Contact us from', () => {
     };
     const { getByRole } = render(<ContactUsForm />);
     const inputsSelect = getByRole('combobox', { name: 'select_subject' });
-    const nameInput = getByRole('textbox', { name: 'name' });
-    const emailInput = getByRole('textbox', { name: 'email' });
-    const messageInput = getByRole('textbox', { name: 'message' });
+    const nameInput = getByRole('textbox', { name: 'Name' });
+    const emailInput = getByRole('textbox', { name: 'Email' });
+    const messageInput = getByRole('textbox', { name: 'Message' });
     const contactForm = getByRole('form');
     act(() => {
       fireEvent.change(nameInput, { target: { value: mockedFormFields.name } });
