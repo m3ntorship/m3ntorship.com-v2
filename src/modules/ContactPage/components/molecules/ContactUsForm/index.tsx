@@ -51,7 +51,7 @@ const ContactUsForm = (): ReactElement => {
       role='form'
       name='contact us form'
       onSubmit={handleSubmit(onSubmit as SubmitHandler<IFormFields>)}
-      className='flex border-spacing-2 flex-col gap-y-6 rounded-lrg bg-white p-8 shadow-shd-1'
+      className='flex border-spacing-2 flex-col gap-y-6 rounded-lrg bg-white p-10 shadow-shd-1'
     >
       {dataSubmited ? (
         <ApplicationSuccess />
