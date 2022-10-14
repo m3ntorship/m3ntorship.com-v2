@@ -8,7 +8,7 @@ import ApplicationSuccess from '@/modules/ApplicationsPage/components/molecules/
 
 const schema = Yup.object({
   subject: Yup.string().required(),
-  name: Yup.string().required().min(4, 'Min chacracter length is 4'),
+  name: Yup.string().required().min(4, 'Min character length is 4'),
   email: Yup.string().required().email(),
   message: Yup.string().required().min(10, 'Min character length is 10'),
 }).required();
