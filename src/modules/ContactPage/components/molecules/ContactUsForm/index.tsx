@@ -31,7 +31,7 @@ const ContactUsForm = (): ReactElement => {
     mode: 'onChange',
     resolver: yupResolver(schema),
   });
-  const [dataSubmited, setSubmitedData] = useState(false);
+  const [dataSubmitted, setSubmittedData] = useState(false);
   const onSubmit = (data: IFormFields, e: React.MouseEvent) => {
     setSubmitedData(true);
     e.preventDefault();
