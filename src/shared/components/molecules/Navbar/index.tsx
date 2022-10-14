@@ -1,5 +1,6 @@
-import { Button, IconButton, Link, Typography } from 'm3ntorship-ui';
+import { Button, IconButton, Link } from 'm3ntorship-ui';
 import NextLink from 'next/link';
+import { useRouter } from 'next/router';
 import Logo from 'public/images/navbar/logo.svg';
 import Menu from 'public/images/navbar/menu.svg';
 import X from 'public/images/navbar/x.svg';
@@ -18,15 +19,22 @@ import { SCREENS } from '@/shared/constants';
 import useMedia from '@/shared/hooks/windowSize';
 import { clsxm } from '@/shared/lib';
 
+import { links } from './links';
+
 export default function Navbar(): ReactElement {
   const [showModal, setShowModal] = useState(false);
+  const { pathname } = useRouter();
   const matchedLgScreen = useMedia(`(max-width: ${SCREENS.LG}px)`);
 
   return (
     <nav className={style.navWrapper}>
       <div className={style.navContent}>
         <div className={style.logoParentDiv}>
-          <Logo className={style.logo} />
+          <NextLink href='/'>
+            <Link>
+              <Logo className={style.logo} />
+            </Link>
+          </NextLink>
         </div>
         {matchedLgScreen && (
           <IconButton
@@ -43,11 +51,14 @@ export default function Navbar(): ReactElement {
 
         {!matchedLgScreen && (
           <ul className={style.linksList}>
-            <NavItem href='/story' text='Story' />
-            <NavItem href='/' text='Programs' />
-            <NavItem href='/testimonials' text='Alumni' />
-            <NavItem href='/' text='Mentors' />
-            <NavItem href='/contact' text='Contact' />
+            {links.map((link) => (
+              <NavItem
+                key={link.id}
+                href={link.route}
+                text={link.name}
+                isActive={link.route === pathname}
+              />
+            ))}
             <div className='mx-med'>
               <NextLink href='/applications'>
                 <Button variant='ghost'>Apply Now</Button>
@@ -68,6 +79,7 @@ type NavbarMobileProps = {
 
 function NavbarMobile({ setShowModal }: NavbarMobileProps): ReactElement {
   const [mounted, setMounted] = useState(false);
+  const { pathname } = useRouter();
   const navMobileClasses = clsxm(
     style.navMobile,
     !mounted && 'translate-x-64',
@@ -83,7 +95,7 @@ function NavbarMobile({ setShowModal }: NavbarMobileProps): ReactElement {
   return (
     <ModalOverlay modalPosition='right' hideModal={() => setShowModal(false)}>
       <div className={navMobileClasses}>
-        <ul className='flex flex-col gap-4'>
+        <ul className='flex flex-col items-center gap-4'>
           <IconButton
             color='neutral'
             size='sm'
@@ -95,11 +107,14 @@ function NavbarMobile({ setShowModal }: NavbarMobileProps): ReactElement {
             <X />
           </IconButton>
 
-          <NavItem href='/story' text='Story' />
-          <NavItem href='/' text='Programs' />
-          <NavItem href='/testimonials' text='Alumni' />
-          <NavItem href='/' text='Mentors' />
-          <NavItem href='/contact' text='Contact' />
+          {links.map((link) => (
+            <NavItem
+              key={link.id}
+              href={link.route}
+              text={link.name}
+              isActive={link.route === pathname}
+            />
+          ))}
         </ul>
         <NextLink href='/applications'>
           <Button className='w-full medium:w-auto' size='lg'>
@@ -115,17 +130,14 @@ function NavbarMobile({ setShowModal }: NavbarMobileProps): ReactElement {
 interface NavProps {
   href: string;
   text: string;
+  isActive: boolean;
 }
 
-function NavItem({ href, text }: NavProps): ReactElement {
+function NavItem({ href, text, isActive }: NavProps): ReactElement {
   return (
     <li className={style.linksListItem}>
       <NextLink href={href}>
-        <Link>
-          <Typography align='center' variant='body1'>
-            {text}
-          </Typography>
-        </Link>
+        <Link className={isActive ? 'font-semi-bold' : ''}>{text}</Link>
       </NextLink>
     </li>
   );
