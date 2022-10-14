@@ -145,7 +145,7 @@ const ContactUsForm = (): ReactElement => {
             />
           </div>
           <div className='inline-flex justify-end'>
-            <Button type='submit' className='inline-block' size='lg'>
+            <Button type='submit' className='inline-block w-full medium:w-auto' size='lg'>
               Send
             </Button>
           </div>
