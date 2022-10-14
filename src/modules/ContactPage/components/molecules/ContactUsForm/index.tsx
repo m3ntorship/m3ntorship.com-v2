@@ -1,6 +1,6 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Button, InputField, SelectInput } from 'm3ntorship-ui';
-import { ReactElement, useEffect, useState } from 'react';
+import { ReactElement, useState } from 'react';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import * as Yup from 'yup';
 
@@ -22,12 +22,10 @@ type IFormFields = {
 const ContactUsForm = (): ReactElement => {
   const {
     handleSubmit,
-    reset,
     control,
-    formState,
-    formState: { errors, isSubmitSuccessful },
+    formState: { errors },
   } = useForm<IFormFields>({
-    mode: 'onChange',
+    mode: 'onSubmit',
     resolver: yupResolver(schema),
   });
   const [dataSubmitted, setSubmittedData] = useState(false);
@@ -36,16 +34,6 @@ const ContactUsForm = (): ReactElement => {
     // eslint-disable-next-line no-console
     console.log(data);
   };
-  useEffect(() => {
-    if (isSubmitSuccessful) {
-      reset({
-        subject: '',
-        name: '',
-        email: '',
-        message: '',
-      });
-    }
-  }, [reset, formState, isSubmitSuccessful]);
   return (
     <form
       role='form'
@@ -54,7 +42,12 @@ const ContactUsForm = (): ReactElement => {
       className='flex border-spacing-2 flex-col gap-y-6 rounded-lrg bg-white p-10 shadow-shd-1'
     >
       {dataSubmitted ? (
-        <ApplicationSuccess />
+        <ApplicationSuccess
+          messageContent='Your message has been sent successfully! We will get back to you very soon'
+          messageTitle='Message sent!'
+          showHomePageButton={false}
+          messageIconSize='sm'
+        />
       ) : (
         <>
           <div className='flex flex-wrap items-end justify-between gap-10 medium:flex-nowrap'>

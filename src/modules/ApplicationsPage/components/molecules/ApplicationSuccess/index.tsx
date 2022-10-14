@@ -6,28 +6,56 @@ import { ReactElement } from 'react';
 
 import { NextImage } from '@/shared/components/atoms';
 
-export default function ApplicationSuccess(): ReactElement {
+type UniosSizes = 'sm' | 'md';
+interface ISuccessProps {
+  messageTitle: string;
+  messageContent: string;
+  showHomePageButton: boolean;
+  messageIconSize: UniosSizes;
+}
+type TPossibleSizes = Record<UniosSizes, { width: string; height: string }>;
+
+export default function ApplicationSuccess({
+  messageTitle = '',
+  messageContent = '',
+  messageIconSize = 'sm',
+  showHomePageButton = false,
+}: ISuccessProps): ReactElement {
+  const possibleSizes: TPossibleSizes = {
+    sm: {
+      width: '100',
+      height: '100',
+    },
+    md: {
+      width: '200',
+      height: '200',
+    },
+  };
+  const { width, height } = possibleSizes[messageIconSize];
   return (
     <div className='flex flex-col items-center space-y-10'>
       <Typography variant='h4' align='center'>
-        Application sent!
+        {messageTitle}
       </Typography>
       <NextImage
         alt='application sent successfully'
         src={successImg}
-        width={200}
-        height={200}
+        width={width}
+        height={height}
       />
       <Typography variant='body2' align='center'>
-        Your application has been successfully received. Our team will review it
-        and will get back to you within 10 working days
+        {messageContent}
       </Typography>
-      <NextLink href='/'>
-        <Button type='button' className='flex items-center'>
-          <Home className='mr-3' />
-          Homepage
-        </Button>
-      </NextLink>
+      {showHomePageButton ? (
+        <NextLink href='/'>
+          <Button type='button' className='flex items-center'>
+            <Home className='mr-3' />
+            Homepage
+          </Button>
+        </NextLink>
+      ) : (
+        ''
+      )}
     </div>
   );
 }
