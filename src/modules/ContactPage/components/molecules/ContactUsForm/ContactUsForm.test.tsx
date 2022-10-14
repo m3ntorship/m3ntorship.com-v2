@@ -25,9 +25,8 @@ describe('Contact us from', () => {
       message: 'message',
       subject: 'first',
     };
-    const { getByRole, debug } = render(<ContactUsForm />);
+    const { getByRole } = render(<ContactUsForm />);
     const inputsSelect = getByRole('combobox', { name: 'select_subject' });
-    const sendButton = getByRole('button', { name: /send/i });
     const nameInput = getByRole('textbox', { name: 'name' });
     const emailInput = getByRole('textbox', { name: 'email' });
     const messageInput = getByRole('textbox', { name: 'message' });
@@ -45,7 +44,5 @@ describe('Contact us from', () => {
     expect(contactForm).toHaveFormValues({
       ...mockedFormFields,
     });
-    fireEvent.click(sendButton);
-    debug();
   });
 });
