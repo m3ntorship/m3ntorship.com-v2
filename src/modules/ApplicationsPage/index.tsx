@@ -7,11 +7,11 @@ import {
   ApplicationsHeader,
   ApplicationsTab,
 } from '@/modules/ApplicationsPage/components/molecules/';
-import ApplicationSuccess from '@/modules/ApplicationsPage/components/molecules/ApplicationSuccess';
 import {
   MenteeApplication,
   MentorApplication,
 } from '@/modules/ApplicationsPage/components/organisms/';
+import { ApplicationSuccess } from '@/shared/components/molecules';
 import { SCREENS } from '@/shared/constants';
 import useMedia from '@/shared/hooks/windowSize';
 

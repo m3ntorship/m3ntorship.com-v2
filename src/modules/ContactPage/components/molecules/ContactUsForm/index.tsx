@@ -4,7 +4,7 @@ import { ReactElement, useState } from 'react';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import * as Yup from 'yup';
 
-import ApplicationSuccess from '@/modules/ApplicationsPage/components/molecules/ApplicationSuccess';
+import { ApplicationSuccess } from '@/shared/components/molecules';
 
 const schema = Yup.object({
   subject: Yup.string().required(),
